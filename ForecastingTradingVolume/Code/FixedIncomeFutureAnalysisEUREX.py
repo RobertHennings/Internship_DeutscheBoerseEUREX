@@ -177,7 +177,7 @@ from  itertools import product
 d4 = pd.DataFrame(list(product(*d3.values.T)))
 d4.drop_duplicates(inplace=True)
 d4.columns = ["p","d","q"]
-
+d4.reset_index(drop=True, inplace=True)
 
 #Now the ARIMA model should iterate through each line of the dataframe d4
 
@@ -186,7 +186,11 @@ book.sheets.add("Summary")
 rowInsheet = 1
 
 try:
-    for p,f,q in zip(d4.iloc[:,0], d4.iloc[:,1], d4.iloc[:,2]):
+    for p,f,q in zip(d4.iloc[24:,0], d4.iloc[24:,1], d4.iloc[24:,2]):
+        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA',
+                        FutureWarning)
+        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',
+                                FutureWarning)
         print(p,f,q)
         arima_model = ARIMA(d.iloc[:,4].values, order = (p,f,q))
         model = arima_model.fit()
