@@ -12,6 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt  
 import random
 from statsmodels.tsa.arima_model import ARIMA 
+import warnings
 #EUREX Color codes
 #9ebedf
 #3c7dbe
@@ -187,10 +188,8 @@ rowInsheet = 1
 
 try:
     for p,f,q in zip(d4.iloc[24:,0], d4.iloc[24:,1], d4.iloc[24:,2]):
-        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA',
-                        FutureWarning)
-        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',
-                                FutureWarning)
+        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA',FutureWarning)
+        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',FutureWarning)
         print(p,f,q)
         arima_model = ARIMA(d.iloc[:,4].values, order = (p,f,q))
         model = arima_model.fit()
@@ -203,13 +202,65 @@ try:
 except:
     print(p,f,q)
     
-import warnings
-warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA',
-                        FutureWarning)
-warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',
-                        FutureWarning)
     
+#Read in all the cleaned volume data from each contract, fit the ARIMA(10,2,10) model on it and save some results 
 
+path_read = "/Users/Robert_Hennings/Downloads"
+file_name_read = "CleanedFixedIncomeFuturesEUREX.xlsx"
+
+#save the last real values and the last fitted values of the model
+#save the predicted 30 values
+#save the last 100 values and the predicted 100 values
+#save the fitting results
+#save everything in one file, each sheet as a product
+
+book = xw.Book(path_read+"//"+file_name_read) 
+
+sheets = [i.name for i in book.sheets]
+new_book = xw.Book()
+for k in sheets:
+    new_book.sheets.add(k)
+    
+new_book.sheets["Tabelle1"].delete()
+
+new_book.save(path_read+"//"+"ARIMA_Summary_FixedIncome.xlsx")
+new_book.close()
+
+#save the needed data into the new file, each sheet represents a product
+for table in sheets[0:9]:
+    try:
+        
+        import warnings
+        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA', FutureWarning)
+        warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',FutureWarning)
+        
+        
+        book = xw.Book(path_read+"//"+"CleanedFixedIncomeFuturesEUREX.xlsx")
+        d = pd.DataFrame(book.sheets[table].range("A1").options(expand="table").value)
+        d.columns = d.loc[0]
+        d.drop([0], inplace=True)   
+        d.Volume = d.Volume.astype("float64")
+        # print(d.head())
+        # arima_model = ARIMA(d.iloc[:,5],order=(10,2,10))
+        # model = arima_model.fit()
+        print("Succes______________")
+        b = xw.Book(path_read+"//"+"ARIMA_Summary_FixedIncome.xlsx")
+        b.sheets[table].range("A1").value = d.iloc[:,0] #Save the Date as a column
+        b.sheets[table].range("B1").value = d.iloc[:,5] #Save the Volume as a column
+        
+        fitted = pd.DataFrame(model.fittedvalues[-100:])
+        fitted.columns = ["FittedValues"]
+        fitted["Predicted"] = model.forecast(100)[0]
+        b.sheets[table].range("D1").value = fitted.FittedValues #Last 100 in sample model fitted values
+        b.sheets[table].range("F1").value = fitted.Predicted #100 model predicted values
+        # b.sheets[table].range("H1").value = model.summary().tables[0].data #Summary of fitted model
+        b.save()
+        b.close()
+    
+    except:
+        print("Difficulties with: ", table)
+    
+    
     
 
 
