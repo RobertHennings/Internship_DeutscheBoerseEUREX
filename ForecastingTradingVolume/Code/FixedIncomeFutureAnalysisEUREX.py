@@ -241,8 +241,8 @@ for table in sheets[0:9]:
         d.drop([0], inplace=True)   
         d.Volume = d.Volume.astype("float64")
         # print(d.head())
-        # arima_model = ARIMA(d.iloc[:,5],order=(10,2,10))
-        # model = arima_model.fit()
+        arima_model = ARIMA(d.iloc[:,5],order=(10,2,10))
+        model = arima_model.fit()
         print("Succes______________")
         b = xw.Book(path_read+"//"+"ARIMA_Summary_FixedIncome.xlsx")
         b.sheets[table].range("A1").value = d.iloc[:,0] #Save the Date as a column
@@ -261,9 +261,161 @@ for table in sheets[0:9]:
         print("Difficulties with: ", table)
     
     
+#Now after there is aprediction for every contract with the ARIMA Model, we need to have also a prediction from 
+#a multiple linear regression
+
+#Read in Germany Government Bond data downloaded from investing.com
+
+import glob
+
+glob.os.listdir("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting")[5].split(" ")[1]
+
+bonds = []
+
+for file in glob.os.listdir("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting"):
+    if ".csv" in file:
+        bonds.append(file)
+        
+    else:
+        pass
     
+    
+bonds 
+book = xw.Book()
+try:
+    for bond in bonds:
+        # print(bond.split(" ")[1])
+        book.sheets.add(bond.split(" ")[1]) 
+        
+except:
+    print(bond)
+
+book.sheets["Tabelle1"].delete()
+book.save("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting/Bond_Data.xlsx")
+book.close()
+
+
+for bond in bonds:
+    b = pd.read_csv("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting"+"//"+bond)
+    b.columns = ["Date", "Last", "Open", "High", "Low", "PctChange"]
+    b.Date = pd.to_datetime(b.Date)
+    book = xw.Book("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting/Bond_Data.xlsx")
+    book.sheets[bond.split(" ")[1]].range("A1").value = b
+    book.save()
+    book.close()
+
+#####################################################################################################################################################
+################################################################## Automated Analysis Steps #################################
+#What we need: a function that perfroms automatically ARIMA fitting with saving results, plotting and 
 
 
 
+def Explorative_ARIMA(data, path_adftable, path_arima_fitting, path_fit_predict_summary, opt_arima_order,num_InSample, num_Predict,data_dates):
+    import warnings
+    warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA', FutureWarning)
+    warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',FutureWarning)
+    import pandas as pd
+    import numpy as np
+    import xlwings as xw
+    import matplotlib.pyplot as plt
+    from statsmodels.tsa.arima_model import ARIMA 
+    from statsmodels.tsa.tsatools import adfuller 
+    from statsmodels.tsa.stattools import adfuller 
+    from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+    #Choosing the parameters p,d,q of the ARIMA Model
+    plot_acf(data)
+    plt.show()
+    
+    #First difference
+    plot_acf(data.diff().dropna())
+    plt.show()
+    
+    #Second difference
+    plot_acf(data.diff().diff().dropna())
+    plt.show()
+    
+    #Test for stationarity with the ADF Test for each level of differenciation
+    #Save the results as table
+    adftable = pd.DataFrame()
+    adftable["Level of Diff"] = ["Raw Data", "First Diff","Second Diff"]
+    adftable["P Values"] = [adfuller(data)[1],adfuller(data.diff().dropna())[1],adfuller(data.diff().diff().dropna())[1]]
+    #Add Mean and Std and number of data points of the single versions
+    adftable["Mean"] = [np.mean(data), np.nanmean(data.diff()), np.nanmean(data.diff().diff())]
+    adftable["Std"] = [np.std(data), np.nanstd(data.diff()), np.nanstd(data.diff().diff())]
+    adftable["Data Points"] = [len(data), len(data.diff())-1, len(data.diff().diff())-2]
+    adftable.set_index(["Level of Diff"])
+    print(adftable)
+    adfbook = xw.Book()
+    adfbook.sheets[0].name = "ADF_Table"
+    adfbook.sheets[0].range("A1").options(index=False).value = adftable
+    adfbook.save(path_adftable+"//"+"ADF_Table.xlsx")
+    adfbook.close()
+    
+    
+    #Find per iteration the best ARIMA Model Fit and store the results in an Excelfile
+    #Create all possible values for p,d,q and store in a dataframe thats looped through
+    import itertools 
+    pdqtable = pd.DataFrame()
+    pdqtable["p"] = range(0,11)  
+    pdqtable["d"] = 2
+    pdqtable["q"] = range(0,11)  
+    
+    pdqtable_all = pd.DataFrame(list(itertools.product(*pdqtable.values.T)))
+    pdqtable_all.drop_duplicates(inplace=True)
+    pdqtable_all.reset_index(inplace=True, drop=True)
+    
+    
+    pdqbook = xw.Book()
+    pdqbook.sheets.add("Summary")
+    pdqbook.sheets["Tabelle1"].delete()
+    rowInsheet = 1
+
+    try:
+        for p,f,q in zip(pdqtable_all.iloc[:,0], pdqtable_all.iloc[:,1], pdqtable_all.iloc[:,2]):
+            warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA',FutureWarning)
+            warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',FutureWarning)
+            print(p,f,q)
+            arima_model = ARIMA(data, order = (p,f,q))
+            model = arima_model.fit()
+            # f = open("/Users/Robert_Hennings/Downloads/ARIMAModel/ModelSummary_{p}_{f}_{q}.csv".format(p=p,f=f,q=q), "w")
+            #f.write(model.summary().tables[0].data)
+            # f.write(model.summary().as_csv())
+            # f.close()
+            pdqbook.sheets["Summary"].range("A"+str(rowInsheet)).value = model.summary().tables[0].data
+            rowInsheet += 8
+    except:
+        print(p,f,q)
+    
+    pdqbook.save(path_arima_fitting+"//"+"ARIMA_Optimal_Fitting.xlsx")
+    pdqbook.close()
+    
+        
+        
+    #Store the AIC for each version p,f,q in a seperate sheet to be able to track the fitting performance
+    
+    
+    #Saving some Data for showing and comparing the model fit
+    arima_model = ARIMA(data,order=opt_arima_order)
+    model = arima_model.fit()
+    
+    
+    fit_predict_book = xw.Book()
+    fit_predict_book.sheets[0].name = "FitPredict"
+    
+    fitted = pd.DataFrame(model.fittedvalues[-num_InSample:])
+    fitted.columns = ["FittedValues "+str(num_InSample)]
+    fitted["Date"] = data_dates[-num_InSample:]
+    fitted["Predicted "+str(num_InSample)] = model.forecast(num_InSample)[0]
+    fit_predict_book.sheets[0].range("D1").value = fitted.iloc[:,1] #Last 100 in sample model fitted values
+    fit_predict_book.sheets[0].range("F1").value = fitted.iloc[:,2]
+    
+    
+    fit_predict_book.save(path_fit_predict_summary+"//"+"Fit_Predict_ModelData.xlsx")
+    fit_predict_book.close()
+    
+    
+    
+    
+#test the written function
 
 
