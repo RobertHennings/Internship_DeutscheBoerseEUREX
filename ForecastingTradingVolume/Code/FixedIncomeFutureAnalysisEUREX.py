@@ -488,8 +488,25 @@ Explorative_ARIMA(data=bund_data
 
 #introduce a train test split for the model
 def train_test_split(X,y,test_size):
+    X_train = X[:round(len(X)*test_size)]
+    X_test = X[-round(len(X)*(1-test_size)):]
+    y_train = y[:round(len(y)*test_size)]
+    y_test = y[-round(len(y)*(1-test_size)):]
+    print("Length of X_train: ",len(X_train),
+          "\nLength of X_test: ",len(X_test),
+          "\nLength of y_train: ",len(y_train),
+          "\nLength of y_test: ",len(y_test))
+    return X_train, X_test, y_train, y_test
     
 
+
+
+
+f = pd.DataFrame(range(0,20), columns =["Var1"])
+f["Target"] = range(60,80)
+
+
+
+X_train, X_test, y_train, y_test = train_test_split(X=f.iloc[:,0],y=f.Target,test_size=0.7)
+
 #automatically find the best fit for the residuals 
-
-
