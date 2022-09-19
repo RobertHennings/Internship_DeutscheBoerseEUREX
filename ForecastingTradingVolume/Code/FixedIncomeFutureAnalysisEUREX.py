@@ -6,6 +6,7 @@ Created on Sat Sep  3 16:55:53 2022
 @author: Robert_Hennings
 """
 
+#Load the necessary libraries
 import pandas as pd
 import xlwings as xw
 import numpy as np
@@ -13,7 +14,8 @@ import matplotlib.pyplot as plt
 import random
 from statsmodels.tsa.arima_model import ARIMA 
 import warnings
-#EUREX Color codes
+from  itertools import product
+#EUREX Color codes for graphs in HEX notation
 #9ebedf
 #3c7dbe
 #80e7be
@@ -25,20 +27,21 @@ import warnings
 #7030A0
 #A5A5A5
 
-#Config the graphic resolution
+#Configure the graphic resolution to retina
 %config InlineBackend.figure_format = "retina"
 
-#Read in the pure Data on the FI Futures with Price, Open, High, Low and Change
+#Read in the pure Data on the FI Futures with Price, Open, High, Low and Change in an uncleaned version
+#Load the EuroBundFuture as representative example
 d = pd.read_excel("/Users/Robert_Hennings/Downloads/FixedIncomeFuturesEurex.xlsx",sheet_name="EuroBundFuture", index_col=0)
-#Edit the columns
+#Rename the columns
 d.columns = ["Price", "Open", "High", "Low", "Volume", "PctChange"]
 
-#Order the whole dataframe in a new way
+#Order the whole dataframe based on the dates
 d.sort_values(by="Datum", inplace=True)
 
-#Replace the - with NaNs
+#Replace the - with NaNs to drop them afterwards
 d.Volume.replace("-", np.nan, inplace=True)
-#Drop all NaNs 
+#Drop all NaNs from the Datafrme
 d.dropna(inplace=True)
 #Add an Index column
 d["Ind"] = range(0, d.shape[0])
@@ -47,7 +50,7 @@ d["Ind"] = range(0, d.shape[0])
 #Set the tyoe to str to edit the column entries
 d.Volume = d.Volume.astype("str")
 
-
+#If the data is scraped from Investing.com and not downloaded the following cleaning process needs to be executed for each security
 #Replace every M and multiply the entry by 1000000 and do the same but with thousands for the entries containing K
 for i in d.Volume:
     if "M" in str(i):
@@ -82,7 +85,7 @@ for i in range(0,d.shape[0]):
 
 
 #Plot the Daily Volume and its Volatility
-#Write a small function to plot to variables together
+#Write a small function to plot two variables together
 def plot_days(data,column_names,colors,labels,days, title,ylabel,xlabel):
     plt.plot(data[column_names[0]][-days:], color=colors[0], label=labels[0])
     plt.plot(data[column_names[1]][-days:], color=colors[1], label=labels[1])
@@ -130,8 +133,8 @@ plot_days(data=d,column_names=["Volume", "Std_PctChangeWeekly"],colors=["#201751
 
 
 #Now investigate to find a proper ARIMA Model to forecast the volume
-#See if theres linear correlation between variables
-
+#See if there is linear correlation between variables
+#Insert the spread as Variable
 d.insert(6,"SpreadHigh_Low",value=d.High-d.Low)
 
 #As some papers state, there is a certain linear correlation between the High-Low Spread and the Trading Volume
@@ -163,7 +166,7 @@ plt.show()
 
 
 #Create an iterating algorithm that iterates through all combinations for p,d,q variables in an ARIMA model
-#values for p,d,q should be n the range of 10
+#values for p,d,q should be in the range of values from 0 to 10 for p and q, d in the range of 0 to 2
 #create a dataframe with columns p,d,q housing all possible combination sof numbers 0 to 10
 
 
@@ -172,18 +175,19 @@ d3 = pd.DataFrame(columns=["p","d","q"])
 d3.p = range(0,11)
 d3.d = 2
 d3.q = range(0,11)
+#use itertools to get all possible combinations
 
-from  itertools import product
 #all columns
 d4 = pd.DataFrame(list(product(*d3.values.T)))
 d4.drop_duplicates(inplace=True)
 d4.columns = ["p","d","q"]
 d4.reset_index(drop=True, inplace=True)
 
-#Now the ARIMA model should iterate through each line of the dataframe d4
-
+#Now the ARIMA model should iterate through each line of the dataframe d4 and be trained
+#Results will be saved in a new excel file
 book = xw.Book()
 book.sheets.add("Summary")
+book.sheets["Tabelle1"].delete()
 rowInsheet = 1
 
 try:
@@ -203,7 +207,7 @@ except:
     print(p,f,q)
     
     
-#Read in all the cleaned volume data from each contract, fit the ARIMA(10,2,10) model on it and save some results 
+#Read in all the cleaned volume data from each contract, fit the ARIMA(10,2,10) model on it and save the results 
 
 path_read = "/Users/Robert_Hennings/Downloads"
 file_name_read = "CleanedFixedIncomeFuturesEUREX.xlsx"
@@ -214,15 +218,18 @@ file_name_read = "CleanedFixedIncomeFuturesEUREX.xlsx"
 #save the fitting results
 #save everything in one file, each sheet as a product
 
+#Open the existing data containing excel file to read out the sheets 
 book = xw.Book(path_read+"//"+file_name_read) 
 
+#save sheets 
 sheets = [i.name for i in book.sheets]
+#save sheets in new book to keep the structure
 new_book = xw.Book()
 for k in sheets:
     new_book.sheets.add(k)
     
 new_book.sheets["Tabelle1"].delete()
-
+#save the book
 new_book.save(path_read+"//"+"ARIMA_Summary_FixedIncome.xlsx")
 new_book.close()
 
@@ -236,20 +243,25 @@ for table in sheets[0:9]:
         
         
         book = xw.Book(path_read+"//"+"CleanedFixedIncomeFuturesEUREX.xlsx")
+        #Read in the data already existing
         d = pd.DataFrame(book.sheets[table].range("A1").options(expand="table").value)
+        #set first row as columns
         d.columns = d.loc[0]
+        #drop first column
         d.drop([0], inplace=True)   
+        #change datatype of Volume
         d.Volume = d.Volume.astype("float64")
-        # print(d.head())
+        # fit the model
         arima_model = ARIMA(d.iloc[:,5],order=(10,2,10))
         model = arima_model.fit()
         print("Succes______________")
         b = xw.Book(path_read+"//"+"ARIMA_Summary_FixedIncome.xlsx")
         b.sheets[table].range("A1").value = d.iloc[:,0] #Save the Date as a column
         b.sheets[table].range("B1").value = d.iloc[:,5] #Save the Volume as a column
-        
+        #save the fitted in sample data in a separate Dataframe
         fitted = pd.DataFrame(model.fittedvalues[-100:])
         fitted.columns = ["FittedValues"]
+        #save 100 model forecasts
         fitted["Predicted"] = model.forecast(100)[0]
         b.sheets[table].range("D1").value = fitted.FittedValues #Last 100 in sample model fitted values
         b.sheets[table].range("F1").value = fitted.Predicted #100 model predicted values
@@ -262,16 +274,16 @@ for table in sheets[0:9]:
     
     
 #Now after there is aprediction for every contract with the ARIMA Model, we need to have also a prediction from 
-#a multiple linear regression
+#a multiple linear regression with external variables
 
 #Read in Germany Government Bond data downloaded from investing.com
 
 import glob
-
+#load the single data files for storing each Bond in a sheet in an excel file
 glob.os.listdir("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting")[5].split(" ")[1]
 
 bonds = []
-
+#create a list of the available bonds
 for file in glob.os.listdir("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting"):
     if ".csv" in file:
         bonds.append(file)
@@ -279,12 +291,12 @@ for file in glob.os.listdir("/Users/Robert_Hennings/Downloads/TradingVolumeForec
     else:
         pass
     
-    
+#create an excel file that houses all the data
 bonds 
 book = xw.Book()
 try:
     for bond in bonds:
-        # print(bond.split(" ")[1])
+        
         book.sheets.add(bond.split(" ")[1]) 
         
 except:
@@ -294,7 +306,7 @@ book.sheets["Tabelle1"].delete()
 book.save("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting/Bond_Data.xlsx")
 book.close()
 
-
+#save the data in each sheet
 for bond in bonds:
     b = pd.read_csv("/Users/Robert_Hennings/Downloads/TradingVolumeForecasting"+"//"+bond)
     b.columns = ["Date", "Last", "Open", "High", "Low", "PctChange"]
@@ -311,6 +323,35 @@ for bond in bonds:
 
 
 def Explorative_ARIMA(data, path_adftable, path_arima_fitting, path_fit_predict_summary, opt_arima_order,num_InSample, num_Predict,data_dates):
+    """
+    
+
+    Parameters
+    ----------
+    data : TYPE float, series
+        Data onto which an ARIMA Model should be fitted
+        Univaraite values of a Timeseries without dates
+    path_adftable : TYPE str
+        File Path where the ADF Table for Raw Data, First and Second Diff should be saved
+    path_arima_fitting : TYPE str
+        File Path where the Summary of the ARIMA Fitting process should be saved
+    path_fit_predict_summary : TYPE str
+        File Path where the results of the final model and its predictions should be saved
+    opt_arima_order : TYPE tuple
+        Order of the optimal ARIMA Model that generates predictions
+    num_InSample : TYPE int
+        Number of In Sample Datapoints that should be stored for comparison
+    num_Predict : TYPE int
+        Number of predictions the fitted ARIMA Model should make
+    data_dates : TYPE list, series
+        The Dates column from the original Dataframe that houses all the Data
+
+    Returns
+    -------
+    Three Excel files in the according paths.
+    Three plots for the Autocorrelations.
+
+    """
     import warnings
     warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARMA', FutureWarning)
     warnings.filterwarnings('ignore', 'statsmodels.tsa.arima_model.ARIMA',FutureWarning)
@@ -319,19 +360,28 @@ def Explorative_ARIMA(data, path_adftable, path_arima_fitting, path_fit_predict_
     import xlwings as xw
     import matplotlib.pyplot as plt
     from statsmodels.tsa.arima_model import ARIMA 
-    from statsmodels.tsa.tsatools import adfuller 
+    #from statsmodels.tsa.tsatools import adfuller 
     from statsmodels.tsa.stattools import adfuller 
     from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
     #Choosing the parameters p,d,q of the ARIMA Model
     plot_acf(data)
+    plt.title("Autocorrelation Raw Data")
+    plt.xlabel("Lagged Values")
+    plt.ylabel("Correlation")
     plt.show()
     
     #First difference
     plot_acf(data.diff().dropna())
+    plt.title("Autocorrelation Fisrt Diff")
+    plt.xlabel("Lagged Values")
+    plt.ylabel("Correlation")
     plt.show()
     
     #Second difference
     plot_acf(data.diff().diff().dropna())
+    plt.title("Autocorrelation Fisrt Diff")
+    plt.xlabel("Lagged Values")
+    plt.ylabel("Correlation")
     plt.show()
     
     #Test for stationarity with the ADF Test for each level of differenciation
@@ -392,30 +442,54 @@ def Explorative_ARIMA(data, path_adftable, path_arima_fitting, path_fit_predict_
         
         
     #Store the AIC for each version p,f,q in a seperate sheet to be able to track the fitting performance
-    
+    #still needs to be done here 
     
     #Saving some Data for showing and comparing the model fit
     arima_model = ARIMA(data,order=opt_arima_order)
     model = arima_model.fit()
     
-    
+    #open a new book and edit first sheets name
     fit_predict_book = xw.Book()
     fit_predict_book.sheets[0].name = "FitPredict"
-    
+    #create Dataframe that stores the desired values
     fitted = pd.DataFrame(model.fittedvalues[-num_InSample:])
     fitted.columns = ["FittedValues "+str(num_InSample)]
-    fitted["Date"] = data_dates[-num_InSample:]
+    fitted.insert(0,"Date",data_dates[-num_InSample:])
+    fitted["Original Values"] = data[-num_InSample:]
     fitted["Predicted "+str(num_InSample)] = model.forecast(num_InSample)[0]
-    fit_predict_book.sheets[0].range("D1").value = fitted.iloc[:,1] #Last 100 in sample model fitted values
-    fit_predict_book.sheets[0].range("F1").value = fitted.iloc[:,2]
+    #dump DataFrame into the excel
+    fit_predict_book.sheets[0].range("A1").options(index=False).value = fitted #Last x values in sample model fitted values
     
     
+    #save the book at the desired place
     fit_predict_book.save(path_fit_predict_summary+"//"+"Fit_Predict_ModelData.xlsx")
     fit_predict_book.close()
-    
-    
+    print("Analysis finished")
     
     
 #test the written function
+bund = pd.read_excel("/Users/Robert_Hennings/Downloads/CleanedFixedIncomeFuturesEUREX.xlsx", sheet_name="EuroBundFuture")
+bund.drop("Ind", axis=1, inplace=True)
+bund_dates = bund.Datum 
+bund_data = bund.Volume 
+
+#Test the function
+Explorative_ARIMA(data=bund_data
+                  , path_adftable="/Users/Robert_Hennings/Downloads/test"
+                  , path_arima_fitting= "/Users/Robert_Hennings/Downloads/test"
+                  , path_fit_predict_summary ="/Users/Robert_Hennings/Downloads/test"
+                  , opt_arima_order =(2,2,6)
+                  ,num_InSample = 30, 
+                  num_Predict=30,
+                  data_dates = bund_dates)
+
+
+
+
+#introduce a train test split for the model
+def train_test_split(X,y,test_size):
+    
+
+#automatically find the best fit for the residuals 
 
 
