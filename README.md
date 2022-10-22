@@ -7,4 +7,4 @@ This repository contains background material that I used during my time as an in
 </p>
 
 
-The Eurex Products (Interest Rate Derivatives)[https://www.eurex.com/ex-en/markets/int]
+The Eurex Products(https://www.eurex.com/ex-en/markets/int)
