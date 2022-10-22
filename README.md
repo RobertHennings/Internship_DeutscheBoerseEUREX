@@ -17,3 +17,5 @@ Some useful Quick Links:
 [Trading Statictics (Monthly PDF)](https://www.eurex.com/ex-en/data/statistics/monthly-statistics)
 
 [Available Trading Strategies](https://www.eurex.com/ex-en/trade/trading-tools/strategy-master)
+
+[Notified Bonds | Deliverable Bonds and Conversion Factors](https://www.eurex.com/ex-en/data/clearing-files/notified-deliverable-bonds-conversion-factors)
