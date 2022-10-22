@@ -6,5 +6,14 @@ This repository contains background material that I used during my time as an in
        width="400"/>
 </p>
 
+Some useful Quick Links:
 
-The Eurex Products(https://www.eurex.com/ex-en/markets/int)
+[The Eurex Products (Interest Rate Derivatives)](https://www.eurex.com/ex-en/markets/int)
+
+[Liquidity Classes](https://www.eurex.com/resource/blob/65902/5e28c07fe383e0ba1db5ca380d272ab8/data/liquidity-classes.zip)
+
+[Trading Statictics (Daily Excel File)](https://www.eurex.com/ex-en/data/statistics/trading-statistics)
+
+[Trading Statictics (Monthly PDF)](https://www.eurex.com/ex-en/data/statistics/monthly-statistics)
+
+[Available Trading Strategies](https://www.eurex.com/ex-en/trade/trading-tools/strategy-master)
