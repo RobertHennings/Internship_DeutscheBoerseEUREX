@@ -19,3 +19,7 @@ Some useful Quick Links:
 [Available Trading Strategies](https://www.eurex.com/ex-en/trade/trading-tools/strategy-master)
 
 [Notified Bonds | Deliverable Bonds and Conversion Factors](https://www.eurex.com/ex-en/data/clearing-files/notified-deliverable-bonds-conversion-factors)
+
+[FIA Article](https://www.fia.org/marketvoice/articles/data-spotlight-bond-futures-trading-surges-eurex)
+
+[German Finance Agency](https://www.deutsche-finanzagentur.de/bundeswertpapiere/bundeswertpapierarten/ueberblick-bundeswertpapiere)
