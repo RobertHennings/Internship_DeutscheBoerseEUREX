@@ -1,0 +1,595 @@
+InstrumentSubTypeID;InstrumentType;ShortName;FullName;SubTypeDefinition (BuyPerspective);NumberOfLegs;Leg;LegBuySell;Ratio;CallPut;ExpiryRule;StrikeRule;MinimumNetPrice;UnderlyingBuySell;MaximumSubTypeDelta;Market
+1;STANDARD_OPTION_STRATEGY;BER;Put Spread;Buy Put, sell Put at lower exercise price;2;1;BUY;1;P;;;;;;EUREX
+1;STANDARD_OPTION_STRATEGY;BER;Put Spread;Buy Put, sell Put at lower exercise price;2;2;SELL;1;P;EQ;LT;;;;EUREX
+2;STANDARD_OPTION_STRATEGY;BER-C;Put Spread versus Call;Buy Put, sell Put at lower exercise price, sell Call at any exercise price;3;1;BUY;1;P;;;;;;EUREX
+2;STANDARD_OPTION_STRATEGY;BER-C;Put Spread versus Call;Buy Put, sell Put at lower exercise price, sell Call at any exercise price;3;2;SELL;1;P;EQ;LT;;;;EUREX
+2;STANDARD_OPTION_STRATEGY;BER-C;Put Spread versus Call;Buy Put, sell Put at lower exercise price, sell Call at any exercise price;3;3;SELL;1;C;EQ;;;;;EUREX
+3;STANDARD_OPTION_STRATEGY;BLT;Call Calendar Spread;Sell Call near month, buy Call at same exercise price in far month;2;1;SELL;1;C;;;;;;EUREX
+3;STANDARD_OPTION_STRATEGY;BLT;Call Calendar Spread;Sell Call near month, buy Call at same exercise price in far month;2;2;BUY;1;C;GT;EQ;;;;EUREX
+4;STANDARD_OPTION_STRATEGY;BOX;Box;Buy Call, sell Put at same exercise price, buy Put and sell Call at higher exercise price;4;1;BUY;1;C;;;ZERO;;;EUREX
+4;STANDARD_OPTION_STRATEGY;BOX;Box;Buy Call, sell Put at same exercise price, buy Put and sell Call at higher exercise price;4;2;SELL;1;P;EQ;EQ;ZERO;;;EUREX
+4;STANDARD_OPTION_STRATEGY;BOX;Box;Buy Call, sell Put at same exercise price, buy Put and sell Call at higher exercise price;4;3;BUY;1;P;EQ;GT;ZERO;;;EUREX
+4;STANDARD_OPTION_STRATEGY;BOX;Box;Buy Call, sell Put at same exercise price, buy Put and sell Call at higher exercise price;4;4;SELL;1;C;EQ;EQ;ZERO;;;EUREX
+5;STANDARD_OPTION_STRATEGY;BR13;3x1 Ratio Put Spread;Sell Put, buy three Puts at lower exercise price;2;1;SELL;1;P;;;;;;EUREX
+5;STANDARD_OPTION_STRATEGY;BR13;3x1 Ratio Put Spread;Sell Put, buy three Puts at lower exercise price;2;2;BUY;3;P;EQ;LT;;;;EUREX
+6;STANDARD_OPTION_STRATEGY;BRT;Put Calendar Spread;Sell Put near month, buy Put at same exercise price in far month;2;1;SELL;1;P;;;;;;EUREX
+6;STANDARD_OPTION_STRATEGY;BRT;Put Calendar Spread;Sell Put near month, buy Put at same exercise price in far month;2;2;BUY;1;P;GT;EQ;;;;EUREX
+7;STANDARD_OPTION_STRATEGY;BU13;3x1 Ratio Call Spread;Sell Call, buy three Calls at higher exercise price;2;1;SELL;1;C;;;;;;EUREX
+7;STANDARD_OPTION_STRATEGY;BU13;3x1 Ratio Call Spread;Sell Call, buy three Calls at higher exercise price;2;2;BUY;3;C;EQ;GT;;;;EUREX
+8;STANDARD_OPTION_STRATEGY;BUL;Call Spread;Buy Call, sell Call at higher exercise price;2;1;BUY;1;C;;;;;;EUREX
+8;STANDARD_OPTION_STRATEGY;BUL;Call Spread;Buy Call, sell Call at higher exercise price;2;2;SELL;1;C;EQ;GT;;;;EUREX
+9;STANDARD_OPTION_STRATEGY;BUL-P;Call Spread versus Short Put;Buy Call, sell Call at higher exercise price, sell Put at any exercise price;3;1;BUY;1;C;;;;;;EUREX
+9;STANDARD_OPTION_STRATEGY;BUL-P;Call Spread versus Short Put;Buy Call, sell Call at higher exercise price, sell Put at any exercise price;3;2;SELL;1;C;EQ;GT;;;;EUREX
+9;STANDARD_OPTION_STRATEGY;BUL-P;Call Spread versus Short Put;Buy Call, sell Call at higher exercise price, sell Put at any exercise price;3;3;SELL;1;P;EQ;;;;;EUREX
+10;STANDARD_OPTION_STRATEGY;CBUS;Skinny Call Butterfly;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price;3;1;BUY;1;C;;;;;;EUREX
+10;STANDARD_OPTION_STRATEGY;CBUS;Skinny Call Butterfly;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price;3;2;SELL;1;C;EQ;GT;;;;EUREX
+10;STANDARD_OPTION_STRATEGY;CBUS;Skinny Call Butterfly;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price;3;3;BUY;1;C;EQ;GT;;;;EUREX
+11;STANDARD_OPTION_STRATEGY;CBUT;Call Butterfly;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price;3;1;BUY;1;C;;;;;;EUREX
+11;STANDARD_OPTION_STRATEGY;CBUT;Call Butterfly;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price;3;2;SELL;2;C;EQ;GT;;;;EUREX
+11;STANDARD_OPTION_STRATEGY;CBUT;Call Butterfly;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price;3;3;BUY;1;C;EQ;AS_TWO;;;;EUREX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;1;BUY;1;C;;;;;;EUREX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;2;SELL;1;C;EQ;GT;;;;EUREX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;3;SELL;1;C;EQ;AS_TWO;;;;EUREX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;4;BUY;1;C;EQ;AS_TWO;;;;EUREX
+13;STANDARD_OPTION_STRATEGY;CDIA;Call Diagonal Calendar Spread;Sell Call near month, buy Call at different exercise price in far month;2;1;SELL;1;C;;;;;;EUREX
+13;STANDARD_OPTION_STRATEGY;CDIA;Call Diagonal Calendar Spread;Sell Call near month, buy Call at different exercise price in far month;2;2;BUY;1;C;GT;NE;;;;EUREX
+14;STANDARD_OPTION_STRATEGY;CLAD;Call Ladder;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price;3;1;BUY;1;C;;;;;;EUREX
+14;STANDARD_OPTION_STRATEGY;CLAD;Call Ladder;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price;3;2;SELL;1;C;EQ;GT;;;;EUREX
+14;STANDARD_OPTION_STRATEGY;CLAD;Call Ladder;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price;3;3;SELL;1;C;EQ;AS_TWO;;;;EUREX
+15;STANDARD_OPTION_STRATEGY;CNV;Conversion/Reversal;Buy Call, sell Put at same exercise price;2;1;BUY;1;C;;;;;;EUREX
+15;STANDARD_OPTION_STRATEGY;CNV;Conversion/Reversal;Buy Call, sell Put at same exercise price;2;2;SELL;1;P;EQ;EQ;;;;EUREX
+16;STANDARD_OPTION_STRATEGY;COMBO;Combo;Sell Call, buy Put at lower exercise price;2;1;SELL;1;C;;;;;;EUREX
+16;STANDARD_OPTION_STRATEGY;COMBO;Combo;Sell Call, buy Put at lower exercise price;2;2;BUY;1;P;EQ;LT;;;;EUREX
+17;STANDARD_OPTION_STRATEGY;DIASTD;Diagonal Straddle Calendar Spread;Sell Call and Put in near month, buy Call and Put at different exercise price in far month;4;1;SELL;1;C;;;;;;EUREX
+17;STANDARD_OPTION_STRATEGY;DIASTD;Diagonal Straddle Calendar Spread;Sell Call and Put in near month, buy Call and Put at different exercise price in far month;4;2;SELL;1;P;EQ;EQ;;;;EUREX
+17;STANDARD_OPTION_STRATEGY;DIASTD;Diagonal Straddle Calendar Spread;Sell Call and Put in near month, buy Call and Put at different exercise price in far month;4;3;BUY;1;C;GT;NE;;;;EUREX
+17;STANDARD_OPTION_STRATEGY;DIASTD;Diagonal Straddle Calendar Spread;Sell Call and Put in near month, buy Call and Put at different exercise price in far month;4;4;BUY;1;P;EQ;EQ;;;;EUREX
+18;STANDARD_OPTION_STRATEGY;GUTS;Guts;Buy Call, buy Put at higher exercise price;2;1;BUY;1;C;;;TWO_TICKS;;;EUREX
+18;STANDARD_OPTION_STRATEGY;GUTS;Guts;Buy Call, buy Put at higher exercise price;2;2;BUY;1;P;EQ;GT;TWO_TICKS;;;EUREX
+19;STANDARD_OPTION_STRATEGY;IBUT;Iron Butterfly;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price;4;1;SELL;1;P;;;ZERO;;;EUREX
+19;STANDARD_OPTION_STRATEGY;IBUT;Iron Butterfly;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price;4;2;BUY;1;P;EQ;GT;ZERO;;;EUREX
+19;STANDARD_OPTION_STRATEGY;IBUT;Iron Butterfly;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price;4;3;BUY;1;C;EQ;EQ;ZERO;;;EUREX
+19;STANDARD_OPTION_STRATEGY;IBUT;Iron Butterfly;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price;4;4;SELL;1;C;EQ;GT;ZERO;;;EUREX
+20;STANDARD_OPTION_STRATEGY;JR;Jelly Roll Long;Buy Put, Sell Call at same exercise price in near month. Sell Put, Buy Call at same exercise price in far month.;4;1;BUY;1;P;;;;;;EUREX
+20;STANDARD_OPTION_STRATEGY;JR;Jelly Roll Long;Buy Put, Sell Call at same exercise price in near month. Sell Put, Buy Call at same exercise price in far month.;4;2;SELL;1;C;EQ;EQ;;;;EUREX
+20;STANDARD_OPTION_STRATEGY;JR;Jelly Roll Long;Buy Put, Sell Call at same exercise price in near month. Sell Put, Buy Call at same exercise price in far month.;4;3;SELL;1;P;GT;;;;;EUREX
+20;STANDARD_OPTION_STRATEGY;JR;Jelly Roll Long;Buy Put, Sell Call at same exercise price in near month. Sell Put, Buy Call at same exercise price in far month.;4;4;BUY;1;C;EQ;EQ;;;;EUREX
+21;STANDARD_OPTION_STRATEGY;PBUS;Skinny Put Butterfly;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price;3;1;BUY;1;P;;;;;;EUREX
+21;STANDARD_OPTION_STRATEGY;PBUS;Skinny Put Butterfly;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price;3;2;SELL;1;P;EQ;GT;;;;EUREX
+21;STANDARD_OPTION_STRATEGY;PBUS;Skinny Put Butterfly;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price;3;3;BUY;1;P;EQ;GT;;;;EUREX
+22;STANDARD_OPTION_STRATEGY;PBUT;Put Butterfly;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price;3;1;BUY;1;P;;;;;;EUREX
+22;STANDARD_OPTION_STRATEGY;PBUT;Put Butterfly;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price;3;2;SELL;2;P;EQ;GT;;;;EUREX
+22;STANDARD_OPTION_STRATEGY;PBUT;Put Butterfly;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price;3;3;BUY;1;P;EQ;AS_TWO;;;;EUREX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;1;BUY;1;P;;;;;;EUREX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;2;SELL;1;P;EQ;GT;;;;EUREX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;3;SELL;1;P;EQ;AS_TWO;;;;EUREX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;4;BUY;1;P;EQ;AS_TWO;;;;EUREX
+24;STANDARD_OPTION_STRATEGY;PDIA;Put Diagonal Calendar Spread;Sell Put near month, buy Put at different exercise price in far month;2;1;SELL;1;P;;;;;;EUREX
+24;STANDARD_OPTION_STRATEGY;PDIA;Put Diagonal Calendar Spread;Sell Put near month, buy Put at different exercise price in far month;2;2;BUY;1;P;GT;NE;;;;EUREX
+25;STANDARD_OPTION_STRATEGY;PLAD;Put Ladder;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price;3;1;SELL;1;P;;;;;;EUREX
+25;STANDARD_OPTION_STRATEGY;PLAD;Put Ladder;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price;3;2;SELL;1;P;EQ;GT;;;;EUREX
+25;STANDARD_OPTION_STRATEGY;PLAD;Put Ladder;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price;3;3;BUY;1;P;EQ;AS_TWO;;;;EUREX
+26;STANDARD_OPTION_STRATEGY;RBER;2x1 Ratio Put Spread;Sell Put, buy two Puts at lower exercise price;2;1;SELL;1;P;;;;;;EUREX
+26;STANDARD_OPTION_STRATEGY;RBER;2x1 Ratio Put Spread;Sell Put, buy two Puts at lower exercise price;2;2;BUY;2;P;EQ;LT;;;;EUREX
+27;STANDARD_OPTION_STRATEGY;RBUL;2x1 Ratio Call Spread;Sell Call, buy two Calls at higher exercise price;2;1;SELL;1;C;;;;;;EUREX
+27;STANDARD_OPTION_STRATEGY;RBUL;2x1 Ratio Call Spread;Sell Call, buy two Calls at higher exercise price;2;2;BUY;2;C;EQ;GT;;;;EUREX
+28;STANDARD_OPTION_STRATEGY;STD;Straddle;Buy Call, buy Put at same exercise price;2;1;BUY;1;C;;;TWO_TICKS;;;EUREX
+28;STANDARD_OPTION_STRATEGY;STD;Straddle;Buy Call, buy Put at same exercise price;2;2;BUY;1;P;EQ;EQ;TWO_TICKS;;;EUREX
+29;STANDARD_OPTION_STRATEGY;STD-C;Straddle versus Call;Buy Call, buy Put at same exercise price, sell Call at different exercise price;3;1;BUY;1;C;;;;;;EUREX
+29;STANDARD_OPTION_STRATEGY;STD-C;Straddle versus Call;Buy Call, buy Put at same exercise price, sell Call at different exercise price;3;2;BUY;1;P;EQ;EQ;;;;EUREX
+29;STANDARD_OPTION_STRATEGY;STD-C;Straddle versus Call;Buy Call, buy Put at same exercise price, sell Call at different exercise price;3;3;SELL;1;C;EQ;NE;;;;EUREX
+30;STANDARD_OPTION_STRATEGY;STD-P;Straddle versus Put;Buy Call, buy Put at same exercise price, sell Put at different exercise price;3;1;BUY;1;C;;;;;;EUREX
+30;STANDARD_OPTION_STRATEGY;STD-P;Straddle versus Put;Buy Call, buy Put at same exercise price, sell Put at different exercise price;3;2;BUY;1;P;EQ;EQ;;;;EUREX
+30;STANDARD_OPTION_STRATEGY;STD-P;Straddle versus Put;Buy Call, buy Put at same exercise price, sell Put at different exercise price;3;3;SELL;1;P;EQ;NE;;;;EUREX
+31;STANDARD_OPTION_STRATEGY;STDT;Straddle Calendar Spread;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price;4;1;SELL;1;C;;;;;;EUREX
+31;STANDARD_OPTION_STRATEGY;STDT;Straddle Calendar Spread;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price;4;2;SELL;1;P;EQ;EQ;;;;EUREX
+31;STANDARD_OPTION_STRATEGY;STDT;Straddle Calendar Spread;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price;4;3;BUY;1;C;GT;EQ;;;;EUREX
+31;STANDARD_OPTION_STRATEGY;STDT;Straddle Calendar Spread;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price;4;4;BUY;1;P;EQ;EQ;;;;EUREX
+32;STANDARD_OPTION_STRATEGY;STG;Strangle;Buy Put, buy Call at higher exercise price;2;1;BUY;1;P;;;TWO_TICKS;;;EUREX
+32;STANDARD_OPTION_STRATEGY;STG;Strangle;Buy Put, buy Call at higher exercise price;2;2;BUY;1;C;EQ;GT;TWO_TICKS;;;EUREX
+33;STANDARD_OPTION_STRATEGY;BER-P;Put Spread versus Put;Buy Put, sell Put at lower exercise price, sell Put at any exercise price;3;1;BUY;1;P;;;;;;EUREX
+33;STANDARD_OPTION_STRATEGY;BER-P;Put Spread versus Put;Buy Put, sell Put at lower exercise price, sell Put at any exercise price;3;2;SELL;1;P;EQ;LT;;;;EUREX
+33;STANDARD_OPTION_STRATEGY;BER-P;Put Spread versus Put;Buy Put, sell Put at lower exercise price, sell Put at any exercise price;3;3;SELL;1;P;EQ;;;;;EUREX
+34;STANDARD_OPTION_STRATEGY;BLT12;Call Calendar 2x1 Ratio;Sell 2 Calls near month, buy Call at same exercise price in far month;2;1;SELL;2;C;;;;;;EUREX
+34;STANDARD_OPTION_STRATEGY;BLT12;Call Calendar 2x1 Ratio;Sell 2 Calls near month, buy Call at same exercise price in far month;2;2;BUY;1;C;GT;EQ;;;;EUREX
+35;STANDARD_OPTION_STRATEGY;BRT12;Put Calendar 2x1 Ratio;Sell 2 Puts near month, buy Put at same exercise price in far month;2;1;SELL;2;P;;;;;;EUREX
+35;STANDARD_OPTION_STRATEGY;BRT12;Put Calendar 2x1 Ratio;Sell 2 Puts near month, buy Put at same exercise price in far month;2;2;BUY;1;P;GT;EQ;;;;EUREX
+36;STANDARD_OPTION_STRATEGY;BUL-C;Call Spread versus Call;Buy Call, sell Call at higher exercise price, sell Call at any exercise price;3;1;BUY;1;C;;;;;;EUREX
+36;STANDARD_OPTION_STRATEGY;BUL-C;Call Spread versus Call;Buy Call, sell Call at higher exercise price, sell Call at any exercise price;3;2;SELL;1;C;EQ;GT;;;;EUREX
+36;STANDARD_OPTION_STRATEGY;BUL-C;Call Spread versus Call;Buy Call, sell Call at higher exercise price, sell Call at any exercise price;3;3;SELL;1;C;EQ;;;;;EUREX
+37;STANDARD_OPTION_STRATEGY;BULBR;Call Spread versus Put Spread;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg;4;1;BUY;1;C;;;;;;EUREX
+37;STANDARD_OPTION_STRATEGY;BULBR;Call Spread versus Put Spread;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg;4;2;SELL;1;C;EQ;GT;;;;EUREX
+37;STANDARD_OPTION_STRATEGY;BULBR;Call Spread versus Put Spread;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg;4;3;SELL;1;P;EQ;;;;;EUREX
+37;STANDARD_OPTION_STRATEGY;BULBR;Call Spread versus Put Spread;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg;4;4;BUY;1;P;EQ;LT;;;;EUREX
+38;STANDARD_OPTION_STRATEGY;RTRIS;Ratio Risky;Sell Put, buy two Calls at a higher exercise price;2;1;SELL;1;P;;;;;;EUREX
+38;STANDARD_OPTION_STRATEGY;RTRIS;Ratio Risky;Sell Put, buy two Calls at a higher exercise price;2;2;BUY;2;C;EQ;GT;;;;EUREX
+39;STANDARD_OPTION_STRATEGY;RTSP;Risky Time Spread;Sell Put near month, buy Call  at a higher exercise price in far month;2;1;SELL;1;P;;;;;;EUREX
+39;STANDARD_OPTION_STRATEGY;RTSP;Risky Time Spread;Sell Put near month, buy Call  at a higher exercise price in far month;2;2;BUY;1;C;GT;GT;;;;EUREX
+40;STANDARD_OPTION_STRATEGY;BLTF;Call Calendar Fly;Buy Call near month, sell two Calls in far month, buy Call in further month;3;1;BUY;1;C;;;;;;EUREX
+40;STANDARD_OPTION_STRATEGY;BLTF;Call Calendar Fly;Buy Call near month, sell two Calls in far month, buy Call in further month;3;2;SELL;2;C;GT;EQ;;;;EUREX
+40;STANDARD_OPTION_STRATEGY;BLTF;Call Calendar Fly;Buy Call near month, sell two Calls in far month, buy Call in further month;3;3;BUY;1;C;GT;EQ;;;;EUREX
+41;STANDARD_OPTION_STRATEGY;ICOND;Iron Condor;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg;4;1;SELL;1;P;;;;;;EUREX
+41;STANDARD_OPTION_STRATEGY;ICOND;Iron Condor;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg;4;2;BUY;1;P;EQ;GT;;;;EUREX
+41;STANDARD_OPTION_STRATEGY;ICOND;Iron Condor;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg;4;3;BUY;1;C;EQ;GT;;;;EUREX
+41;STANDARD_OPTION_STRATEGY;ICOND;Iron Condor;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg;4;4;SELL;1;C;EQ;GT;;;;EUREX
+42;STANDARD_OPTION_STRATEGY;BRTF;Put Calendar Fly;Buy Put near month, sell two Puts in far month, buy Put in further month;3;1;BUY;1;P;;;;;;EUREX
+42;STANDARD_OPTION_STRATEGY;BRTF;Put Calendar Fly;Buy Put near month, sell two Puts in far month, buy Put in further month;3;2;SELL;2;P;GT;EQ;;;;EUREX
+42;STANDARD_OPTION_STRATEGY;BRTF;Put Calendar Fly;Buy Put near month, sell two Puts in far month, buy Put in further month;3;3;BUY;1;P;GT;EQ;;;;EUREX
+43;STANDARD_OPTION_STRATEGY;STGS;Strangle Spread;Sell Put, sell Call at higher exercise price in near month, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg;4;1;SELL;1;P;;;;;;EUREX
+43;STANDARD_OPTION_STRATEGY;STGS;Strangle Spread;Sell Put, sell Call at higher exercise price in near month, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg;4;2;SELL;1;C;EQ;GT;;;;EUREX
+43;STANDARD_OPTION_STRATEGY;STGS;Strangle Spread;Sell Put, sell Call at higher exercise price in near month, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg;4;3;BUY;1;P;GT;;;;;EUREX
+43;STANDARD_OPTION_STRATEGY;STGS;Strangle Spread;Sell Put, sell Call at higher exercise price in near month, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg;4;4;BUY;1;C;EQ;GT;;;;EUREX
+44;STANDARD_OPTION_STRATEGY;STD-G;Straddle versus Strangle;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month;4;1;BUY;1;C;;;;;;EUREX
+44;STANDARD_OPTION_STRATEGY;STD-G;Straddle versus Strangle;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month;4;2;BUY;1;P;EQ;EQ;;;;EUREX
+44;STANDARD_OPTION_STRATEGY;STD-G;Straddle versus Strangle;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month;4;3;SELL;1;P;GT;;;;;EUREX
+44;STANDARD_OPTION_STRATEGY;STD-G;Straddle versus Strangle;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month;4;4;SELL;1;C;EQ;GT;;;;EUREX
+45;STANDARD_OPTION_STRATEGY;CB232;2x3x2 Ratio Call Butterfly;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price;3;1;BUY;2;C;;;;;;EUREX
+45;STANDARD_OPTION_STRATEGY;CB232;2x3x2 Ratio Call Butterfly;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price;3;2;SELL;3;C;EQ;GT;;;;EUREX
+45;STANDARD_OPTION_STRATEGY;CB232;2x3x2 Ratio Call Butterfly;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price;3;3;BUY;2;C;EQ;GT;;;;EUREX
+46;STANDARD_OPTION_STRATEGY;PB232;2x3x2x Ratio Put Butterfly;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price;3;1;BUY;2;P;;;;;;EUREX
+46;STANDARD_OPTION_STRATEGY;PB232;2x3x2x Ratio Put Butterfly;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price;3;2;SELL;3;P;EQ;GT;;;;EUREX
+46;STANDARD_OPTION_STRATEGY;PB232;2x3x2x Ratio Put Butterfly;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price;3;3;BUY;2;P;EQ;GT;;;;EUREX
+47;STANDARD_OPTION_STRATEGY;BR23;3x2 Ratio Put Spread;Sell 2 Puts, buy 3 Puts at lower exercise price;2;1;SELL;2;P;;;;;;EUREX
+47;STANDARD_OPTION_STRATEGY;BR23;3x2 Ratio Put Spread;Sell 2 Puts, buy 3 Puts at lower exercise price;2;2;BUY;3;P;EQ;LT;;;;EUREX
+48;STANDARD_OPTION_STRATEGY;BU23;3x2 Ratio Call Spread;Sell 2 Calls, buy 3 Calls at higher exercise price;2;1;SELL;2;C;;;;;;EUREX
+48;STANDARD_OPTION_STRATEGY;BU23;3x2 Ratio Call Spread;Sell 2 Calls, buy 3 Calls at higher exercise price;2;2;BUY;3;C;EQ;GT;;;;EUREX
+49;STANDARD_OPTION_STRATEGY;STDF;Straddle Fly;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month;6;1;BUY;1;C;;;;;;EUREX
+49;STANDARD_OPTION_STRATEGY;STDF;Straddle Fly;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month;6;2;BUY;1;P;EQ;EQ;;;;EUREX
+49;STANDARD_OPTION_STRATEGY;STDF;Straddle Fly;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month;6;3;SELL;2;C;GT;;;;;EUREX
+49;STANDARD_OPTION_STRATEGY;STDF;Straddle Fly;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month;6;4;SELL;2;P;EQ;EQ;;;;EUREX
+49;STANDARD_OPTION_STRATEGY;STDF;Straddle Fly;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month;6;5;BUY;1;C;GT;;;;;EUREX
+49;STANDARD_OPTION_STRATEGY;STDF;Straddle Fly;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month;6;6;BUY;1;P;EQ;EQ;;;;EUREX
+50;STANDARD_OPTION_STRATEGY;RSWP;Risky Swap;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price;4;1;SELL;1;P;;;;;;EUREX
+50;STANDARD_OPTION_STRATEGY;RSWP;Risky Swap;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price;4;2;BUY;1;C;EQ;GT;;;;EUREX
+50;STANDARD_OPTION_STRATEGY;RSWP;Risky Swap;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price;4;3;BUY;1;P;GT;EQ_ONE;;;;EUREX
+50;STANDARD_OPTION_STRATEGY;RSWP;Risky Swap;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price;4;4;SELL;1;C;EQ;AS_TWO;;;;EUREX
+51;STANDARD_OPTION_STRATEGY;BUSWP;Call Spread Swap;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month;4;1;BUY;1;C;;;;;;EUREX
+51;STANDARD_OPTION_STRATEGY;BUSWP;Call Spread Swap;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month;4;2;SELL;1;C;EQ;GT;;;;EUREX
+51;STANDARD_OPTION_STRATEGY;BUSWP;Call Spread Swap;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month;4;3;SELL;1;C;GT;EQ_ONE;;;;EUREX
+51;STANDARD_OPTION_STRATEGY;BUSWP;Call Spread Swap;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month;4;4;BUY;1;C;EQ;AS_TWO;;;;EUREX
+52;STANDARD_OPTION_STRATEGY;BRSWP;Put Spread Swap;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month;4;1;BUY;1;P;;;;;;EUREX
+52;STANDARD_OPTION_STRATEGY;BRSWP;Put Spread Swap;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month;4;2;SELL;1;P;EQ;LT;;;;EUREX
+52;STANDARD_OPTION_STRATEGY;BRSWP;Put Spread Swap;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month;4;3;SELL;1;P;GT;EQ_ONE;;;;EUREX
+52;STANDARD_OPTION_STRATEGY;BRSWP;Put Spread Swap;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month;4;4;BUY;1;P;EQ;AS_TWO;;;;EUREX
+1;OPTION_VOLATILITY_STRATEGY;BER+U;Put Spread versus Underlying;Buy Put, sell Put at lower exercise price, Buy Underlying;2;1;BUY;1;P;;;;BUY;1.0;EUREX
+1;OPTION_VOLATILITY_STRATEGY;BER+U;Put Spread versus Underlying;Buy Put, sell Put at lower exercise price, Buy Underlying;2;2;SELL;1;P;EQ;LT;;BUY;1.0;EUREX
+2;OPTION_VOLATILITY_STRATEGY;BER-C+U;Put Spread versus Short Call/Long Underlying;Buy Put, sell Put at lower exercise price, sell Call at any exercise price, buy Underlying;3;1;BUY;1;P;;;;BUY;2.0;EUREX
+2;OPTION_VOLATILITY_STRATEGY;BER-C+U;Put Spread versus Short Call/Long Underlying;Buy Put, sell Put at lower exercise price, sell Call at any exercise price, buy Underlying;3;2;SELL;1;P;EQ;LT;;BUY;2.0;EUREX
+2;OPTION_VOLATILITY_STRATEGY;BER-C+U;Put Spread versus Short Call/Long Underlying;Buy Put, sell Put at lower exercise price, sell Call at any exercise price, buy Underlying;3;3;SELL;1;C;EQ;;;BUY;2.0;EUREX
+3;OPTION_VOLATILITY_STRATEGY;BLT+U;BLT versus Long Underlying;Sell Call near month, buy Call at same exercise price in far month, buy Underlying;2;1;SELL;1;C;;;;BUY;1.0;EUREX
+3;OPTION_VOLATILITY_STRATEGY;BLT+U;BLT versus Long Underlying;Sell Call near month, buy Call at same exercise price in far month, buy Underlying;2;2;BUY;1;C;GT;EQ;;BUY;1.0;EUREX
+4;OPTION_VOLATILITY_STRATEGY;BLT-U;BLT versus Short Underlying;Sell Call near month, buy Call at same exercise price in far month, sell Underlying;2;1;SELL;1;C;;;;SELL;1.0;EUREX
+4;OPTION_VOLATILITY_STRATEGY;BLT-U;BLT versus Short Underlying;Sell Call near month, buy Call at same exercise price in far month, sell Underlying;2;2;BUY;1;C;GT;EQ;;SELL;1.0;EUREX
+5;OPTION_VOLATILITY_STRATEGY;BRT+U;BRT versus Long Underlying;Sell Put near month, buy Put at same exercise price in far month, buy Underlying;2;1;SELL;1;P;;;;BUY;1.0;EUREX
+5;OPTION_VOLATILITY_STRATEGY;BRT+U;BRT versus Long Underlying;Sell Put near month, buy Put at same exercise price in far month, buy Underlying;2;2;BUY;1;P;GT;EQ;;BUY;1.0;EUREX
+6;OPTION_VOLATILITY_STRATEGY;BRT-U;BRT versus Short Underlying;Sell Put near month, buy Put at same exercise price in far month, sell Underlying;2;1;SELL;1;P;;;;SELL;1.0;EUREX
+6;OPTION_VOLATILITY_STRATEGY;BRT-U;BRT versus Short Underlying;Sell Put near month, buy Put at same exercise price in far month, sell Underlying;2;2;BUY;1;P;GT;EQ;;SELL;1.0;EUREX
+7;OPTION_VOLATILITY_STRATEGY;BUL-P-U;Call Spread versus Short Put/Short Underlying;Buy Call, sell Call at higher exercise price, sell Put at any exercise price, Sell Underlying;3;1;BUY;1;C;;;;SELL;2.0;EUREX
+7;OPTION_VOLATILITY_STRATEGY;BUL-P-U;Call Spread versus Short Put/Short Underlying;Buy Call, sell Call at higher exercise price, sell Put at any exercise price, Sell Underlying;3;2;SELL;1;C;EQ;GT;;SELL;2.0;EUREX
+7;OPTION_VOLATILITY_STRATEGY;BUL-P-U;Call Spread versus Short Put/Short Underlying;Buy Call, sell Call at higher exercise price, sell Put at any exercise price, Sell Underlying;3;3;SELL;1;P;EQ;;;SELL;2.0;EUREX
+8;OPTION_VOLATILITY_STRATEGY;BUL-U;Call Spread versus Underlying;Buy Call, sell Call at higher exercise price, sell Underlying;2;1;BUY;1;C;;;;SELL;1.0;EUREX
+8;OPTION_VOLATILITY_STRATEGY;BUL-U;Call Spread versus Underlying;Buy Call, sell Call at higher exercise price, sell Underlying;2;2;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+9;OPTION_VOLATILITY_STRATEGY;CALL-U;Call Volatility Trade;Buy Call, sell Underlying;1;1;BUY;1;C;;;ONE_TICK;SELL;1.0;EUREX
+10;OPTION_VOLATILITY_STRATEGY;CBUT+U;Call Butterfly versus Long Underlying;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price, buy Underlying;3;1;BUY;1;C;;;;BUY;1.0;EUREX
+10;OPTION_VOLATILITY_STRATEGY;CBUT+U;Call Butterfly versus Long Underlying;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price, buy Underlying;3;2;SELL;2;C;EQ;GT;;BUY;1.0;EUREX
+10;OPTION_VOLATILITY_STRATEGY;CBUT+U;Call Butterfly versus Long Underlying;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price, buy Underlying;3;3;BUY;1;C;EQ;AS_TWO;;BUY;1.0;EUREX
+11;OPTION_VOLATILITY_STRATEGY;CBUT-U;Call Butterfly versus Short Underlying;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price, sell Underlying;3;1;BUY;1;C;;;;SELL;1.0;EUREX
+11;OPTION_VOLATILITY_STRATEGY;CBUT-U;Call Butterfly versus Short Underlying;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price, sell Underlying;3;2;SELL;2;C;EQ;GT;;SELL;1.0;EUREX
+11;OPTION_VOLATILITY_STRATEGY;CBUT-U;Call Butterfly versus Short Underlying;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price, sell Underlying;3;3;BUY;1;C;EQ;AS_TWO;;SELL;1.0;EUREX
+12;OPTION_VOLATILITY_STRATEGY;CCOND+U;Call Condor versus Long Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, buy Underlying;4;1;BUY;1;C;;;;BUY;1.0;EUREX
+12;OPTION_VOLATILITY_STRATEGY;CCOND+U;Call Condor versus Long Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, buy Underlying;4;2;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+12;OPTION_VOLATILITY_STRATEGY;CCOND+U;Call Condor versus Long Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, buy Underlying;4;3;SELL;1;C;EQ;AS_TWO;;BUY;1.0;EUREX
+12;OPTION_VOLATILITY_STRATEGY;CCOND+U;Call Condor versus Long Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, buy Underlying;4;4;BUY;1;C;EQ;AS_TWO;;BUY;1.0;EUREX
+13;OPTION_VOLATILITY_STRATEGY;CCOND-U;Call Condor versus Short Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, sell Underlying;4;1;BUY;1;C;;;;SELL;1.0;EUREX
+13;OPTION_VOLATILITY_STRATEGY;CCOND-U;Call Condor versus Short Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, sell Underlying;4;2;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+13;OPTION_VOLATILITY_STRATEGY;CCOND-U;Call Condor versus Short Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, sell Underlying;4;3;SELL;1;C;EQ;AS_TWO;;SELL;1.0;EUREX
+13;OPTION_VOLATILITY_STRATEGY;CCOND-U;Call Condor versus Short Underlying;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price, sell Underlying;4;4;BUY;1;C;EQ;AS_TWO;;SELL;1.0;EUREX
+14;OPTION_VOLATILITY_STRATEGY;CDIA+U;Call Diagonal Calendar Spread versus Long Underlying;Sell Call near month, buy Call at different exercise price in far month, buy Underlying;2;1;SELL;1;C;;;;BUY;1.0;EUREX
+14;OPTION_VOLATILITY_STRATEGY;CDIA+U;Call Diagonal Calendar Spread versus Long Underlying;Sell Call near month, buy Call at different exercise price in far month, buy Underlying;2;2;BUY;1;C;GT;NE;;BUY;1.0;EUREX
+15;OPTION_VOLATILITY_STRATEGY;CDIA-U;Call Diagonal Calendar Spread versus Short Underlying;Sell Call near month, buy Call at different exercise price in far month, sell Underlying;2;1;SELL;1;C;;;;SELL;1.0;EUREX
+15;OPTION_VOLATILITY_STRATEGY;CDIA-U;Call Diagonal Calendar Spread versus Short Underlying;Sell Call near month, buy Call at different exercise price in far month, sell Underlying;2;2;BUY;1;C;GT;NE;;SELL;1.0;EUREX
+16;OPTION_VOLATILITY_STRATEGY;CLAD+U;Call Ladder versus Long Underlying;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price, buy Underlying;3;1;BUY;1;C;;;;BUY;1.0;EUREX
+16;OPTION_VOLATILITY_STRATEGY;CLAD+U;Call Ladder versus Long Underlying;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price, buy Underlying;3;2;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+16;OPTION_VOLATILITY_STRATEGY;CLAD+U;Call Ladder versus Long Underlying;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price, buy Underlying;3;3;SELL;1;C;EQ;AS_TWO;;BUY;1.0;EUREX
+17;OPTION_VOLATILITY_STRATEGY;CLAD-U;Call Ladder versus Short Underlying;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price, sell Underlying;3;1;BUY;1;C;;;;SELL;1.0;EUREX
+17;OPTION_VOLATILITY_STRATEGY;CLAD-U;Call Ladder versus Short Underlying;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price, sell Underlying;3;2;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+17;OPTION_VOLATILITY_STRATEGY;CLAD-U;Call Ladder versus Short Underlying;Buy Call, sell Call at higher exercise price, sell Call at equally higher exercise price, sell Underlying;3;3;SELL;1;C;EQ;AS_TWO;;SELL;1.0;EUREX
+18;OPTION_VOLATILITY_STRATEGY;CNV-U;CNV versus Underlying;Buy Call, sell Put at same exercise price, sell Underlying;2;1;BUY;1;C;;;;SELL;1.0;EUREX
+18;OPTION_VOLATILITY_STRATEGY;CNV-U;CNV versus Underlying;Buy Call, sell Put at same exercise price, sell Underlying;2;2;SELL;1;P;EQ;EQ;;SELL;1.0;EUREX
+19;OPTION_VOLATILITY_STRATEGY;COMBO+U;Combo versus Long Underlying;Sell Call, buy Put at lower exercise price, buy Underlying;2;1;SELL;1;C;;;;BUY;1.0;EUREX
+19;OPTION_VOLATILITY_STRATEGY;COMBO+U;Combo versus Long Underlying;Sell Call, buy Put at lower exercise price, buy Underlying;2;2;BUY;1;P;EQ;LT;;BUY;1.0;EUREX
+20;OPTION_VOLATILITY_STRATEGY;PBUT+U;Put Butterfly versus Long Underlying;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price, buy Underlying;3;1;BUY;1;P;;;;BUY;1.0;EUREX
+20;OPTION_VOLATILITY_STRATEGY;PBUT+U;Put Butterfly versus Long Underlying;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price, buy Underlying;3;2;SELL;2;P;EQ;GT;;BUY;1.0;EUREX
+20;OPTION_VOLATILITY_STRATEGY;PBUT+U;Put Butterfly versus Long Underlying;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price, buy Underlying;3;3;BUY;1;P;EQ;AS_TWO;;BUY;1.0;EUREX
+21;OPTION_VOLATILITY_STRATEGY;PBUT-U;Put Butterfly versus Short Underlying;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price, sell Underlying;3;1;BUY;1;P;;;;SELL;1.0;EUREX
+21;OPTION_VOLATILITY_STRATEGY;PBUT-U;Put Butterfly versus Short Underlying;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price, sell Underlying;3;2;SELL;2;P;EQ;GT;;SELL;1.0;EUREX
+21;OPTION_VOLATILITY_STRATEGY;PBUT-U;Put Butterfly versus Short Underlying;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price, sell Underlying;3;3;BUY;1;P;EQ;AS_TWO;;SELL;1.0;EUREX
+22;OPTION_VOLATILITY_STRATEGY;PCOND+U;Put Condor versus Long Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, buy Underlying;4;1;BUY;1;P;;;;BUY;1.0;EUREX
+22;OPTION_VOLATILITY_STRATEGY;PCOND+U;Put Condor versus Long Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, buy Underlying;4;2;SELL;1;P;EQ;GT;;BUY;1.0;EUREX
+22;OPTION_VOLATILITY_STRATEGY;PCOND+U;Put Condor versus Long Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, buy Underlying;4;3;SELL;1;P;EQ;AS_TWO;;BUY;1.0;EUREX
+22;OPTION_VOLATILITY_STRATEGY;PCOND+U;Put Condor versus Long Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, buy Underlying;4;4;BUY;1;P;EQ;AS_TWO;;BUY;1.0;EUREX
+23;OPTION_VOLATILITY_STRATEGY;PCOND-U;Put Condor versus Short Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, sell Underlying;4;1;BUY;1;P;;;;SELL;1.0;EUREX
+23;OPTION_VOLATILITY_STRATEGY;PCOND-U;Put Condor versus Short Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, sell Underlying;4;2;SELL;1;P;EQ;GT;;SELL;1.0;EUREX
+23;OPTION_VOLATILITY_STRATEGY;PCOND-U;Put Condor versus Short Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, sell Underlying;4;3;SELL;1;P;EQ;AS_TWO;;SELL;1.0;EUREX
+23;OPTION_VOLATILITY_STRATEGY;PCOND-U;Put Condor versus Short Underlying;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price, sell Underlying;4;4;BUY;1;P;EQ;AS_TWO;;SELL;1.0;EUREX
+24;OPTION_VOLATILITY_STRATEGY;PDIA+U;Put Diagonal Calendar Spread versus Long Underlying;Sell Put near month, buy Put at different exercise price in far month, buy Underlying;2;1;SELL;1;P;;;;BUY;1.0;EUREX
+24;OPTION_VOLATILITY_STRATEGY;PDIA+U;Put Diagonal Calendar Spread versus Long Underlying;Sell Put near month, buy Put at different exercise price in far month, buy Underlying;2;2;BUY;1;P;GT;NE;;BUY;1.0;EUREX
+25;OPTION_VOLATILITY_STRATEGY;PDIA-U;Put Diagonal Calendar Spread versus Short Underlying;Sell Put near month, buy Put at different exercise price in far month, sell Underlying;2;1;SELL;1;P;;;;SELL;1.0;EUREX
+25;OPTION_VOLATILITY_STRATEGY;PDIA-U;Put Diagonal Calendar Spread versus Short Underlying;Sell Put near month, buy Put at different exercise price in far month, sell Underlying;2;2;BUY;1;P;GT;NE;;SELL;1.0;EUREX
+26;OPTION_VOLATILITY_STRATEGY;PLAD+U;Put Ladder versus Long Underlying;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price, buy Underlying;3;1;SELL;1;P;;;;BUY;1.0;EUREX
+26;OPTION_VOLATILITY_STRATEGY;PLAD+U;Put Ladder versus Long Underlying;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price, buy Underlying;3;2;SELL;1;P;EQ;GT;;BUY;1.0;EUREX
+26;OPTION_VOLATILITY_STRATEGY;PLAD+U;Put Ladder versus Long Underlying;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price, buy Underlying;3;3;BUY;1;P;EQ;AS_TWO;;BUY;1.0;EUREX
+27;OPTION_VOLATILITY_STRATEGY;PLAD-U;Put Ladder versus Short Underlying;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price, sell Underlying;3;1;SELL;1;P;;;;SELL;1.0;EUREX
+27;OPTION_VOLATILITY_STRATEGY;PLAD-U;Put Ladder versus Short Underlying;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price, sell Underlying;3;2;SELL;1;P;EQ;GT;;SELL;1.0;EUREX
+27;OPTION_VOLATILITY_STRATEGY;PLAD-U;Put Ladder versus Short Underlying;Sell Put, sell Put at higher exercise price, buy Put at equally higher exercise price, sell Underlying;3;3;BUY;1;P;EQ;AS_TWO;;SELL;1.0;EUREX
+28;OPTION_VOLATILITY_STRATEGY;PUT+U;Put Volatility Trade;Buy Put, buy Underlying;1;1;BUY;1;P;;;ONE_TICK;BUY;1.0;EUREX
+29;OPTION_VOLATILITY_STRATEGY;RBER+U;2x1 Ratio Put Spread versus Long Underlying;Sell Put, buy two Puts at lower exercise price, buy Underlying;2;1;SELL;1;P;;;;BUY;1.0;EUREX
+29;OPTION_VOLATILITY_STRATEGY;RBER+U;2x1 Ratio Put Spread versus Long Underlying;Sell Put, buy two Puts at lower exercise price, buy Underlying;2;2;BUY;2;P;EQ;LT;;BUY;1.0;EUREX
+30;OPTION_VOLATILITY_STRATEGY;RBER-U;2x1 Ratio Put Spread versus Short Underlying;Sell Put, buy two Puts at lower exercise price, sell Underlying;2;1;SELL;1;P;;;;SELL;1.0;EUREX
+30;OPTION_VOLATILITY_STRATEGY;RBER-U;2x1 Ratio Put Spread versus Short Underlying;Sell Put, buy two Puts at lower exercise price, sell Underlying;2;2;BUY;2;P;EQ;LT;;SELL;1.0;EUREX
+31;OPTION_VOLATILITY_STRATEGY;RBUL+U;2x1 Ratio Call Spread versus Long Underlying;Sell Call, buy two Calls at higher exercise price, buy Underlying;2;1;SELL;1;C;;;;BUY;1.0;EUREX
+31;OPTION_VOLATILITY_STRATEGY;RBUL+U;2x1 Ratio Call Spread versus Long Underlying;Sell Call, buy two Calls at higher exercise price, buy Underlying;2;2;BUY;2;C;EQ;GT;;BUY;1.0;EUREX
+32;OPTION_VOLATILITY_STRATEGY;RBUL-U;2x1 Ratio Call Spread versus Short Underlying;Sell Call, buy two Calls at higher exercise price, sell Underlying;2;1;SELL;1;C;;;;SELL;1.0;EUREX
+32;OPTION_VOLATILITY_STRATEGY;RBUL-U;2x1 Ratio Call Spread versus Short Underlying;Sell Call, buy two Calls at higher exercise price, sell Underlying;2;2;BUY;2;C;EQ;GT;;SELL;1.0;EUREX
+33;OPTION_VOLATILITY_STRATEGY;STD+U;Straddle versus Long Underlying;Buy Call, buy Put at same exercise price, buy Underlying;2;1;BUY;1;C;;;TWO_TICKS;BUY;1.0;EUREX
+33;OPTION_VOLATILITY_STRATEGY;STD+U;Straddle versus Long Underlying;Buy Call, buy Put at same exercise price, buy Underlying;2;2;BUY;1;P;EQ;EQ;TWO_TICKS;BUY;1.0;EUREX
+34;OPTION_VOLATILITY_STRATEGY;STD-U;Straddle versus Short Underlying;Buy Call, buy Put at same exercise price, sell Underlying;2;1;BUY;1;C;;;TWO_TICKS;SELL;1.0;EUREX
+34;OPTION_VOLATILITY_STRATEGY;STD-U;Straddle versus Short Underlying;Buy Call, buy Put at same exercise price, sell Underlying;2;2;BUY;1;P;EQ;EQ;TWO_TICKS;SELL;1.0;EUREX
+35;OPTION_VOLATILITY_STRATEGY;STG+U;Strangle versus Long Underlying;Buy Put, buy Call at higher exercise price, buy Underlying;2;1;BUY;1;P;;;TWO_TICKS;BUY;1.0;EUREX
+35;OPTION_VOLATILITY_STRATEGY;STG+U;Strangle versus Long Underlying;Buy Put, buy Call at higher exercise price, buy Underlying;2;2;BUY;1;C;EQ;GT;TWO_TICKS;BUY;1.0;EUREX
+36;OPTION_VOLATILITY_STRATEGY;STG-U;Strangle versus Short Underlying;Buy Put, buy Call at higher exercise price, sell Underlying;2;1;BUY;1;P;;;TWO_TICKS;SELL;1.0;EUREX
+36;OPTION_VOLATILITY_STRATEGY;STG-U;Strangle versus Short Underlying;Buy Put, buy Call at higher exercise price, sell Underlying;2;2;BUY;1;C;EQ;GT;TWO_TICKS;SELL;1.0;EUREX
+37;OPTION_VOLATILITY_STRATEGY;BLTF+U;Call Calendar Fly versus Long Underlying;Buy Call near month, sell two Calls in far month, buy Call in further month, buy Underlying;3;1;BUY;1;C;;;;BUY;1.0;EUREX
+37;OPTION_VOLATILITY_STRATEGY;BLTF+U;Call Calendar Fly versus Long Underlying;Buy Call near month, sell two Calls in far month, buy Call in further month, buy Underlying;3;2;SELL;2;C;GT;EQ;;BUY;1.0;EUREX
+37;OPTION_VOLATILITY_STRATEGY;BLTF+U;Call Calendar Fly versus Long Underlying;Buy Call near month, sell two Calls in far month, buy Call in further month, buy Underlying;3;3;BUY;1;C;GT;EQ;;BUY;1.0;EUREX
+38;OPTION_VOLATILITY_STRATEGY;BLTF-U;Call Calendar Fly versus Short Underlying;Buy Call near month, sell two Calls in far month, buy Call in further month, sell Underlying;3;1;BUY;1;C;;;;SELL;1.0;EUREX
+38;OPTION_VOLATILITY_STRATEGY;BLTF-U;Call Calendar Fly versus Short Underlying;Buy Call near month, sell two Calls in far month, buy Call in further month, sell Underlying;3;2;SELL;2;C;GT;EQ;;SELL;1.0;EUREX
+38;OPTION_VOLATILITY_STRATEGY;BLTF-U;Call Calendar Fly versus Short Underlying;Buy Call near month, sell two Calls in far month, buy Call in further month, sell Underlying;3;3;BUY;1;C;GT;EQ;;SELL;1.0;EUREX
+39;OPTION_VOLATILITY_STRATEGY;BLT12+U;Call Calendar 2x1 Ratio versus Long Underlying;Sell 2 Calls near month, buy Call at same exercise price in far month, buy underlying;2;1;SELL;2;C;;;;BUY;2.0;EUREX
+39;OPTION_VOLATILITY_STRATEGY;BLT12+U;Call Calendar 2x1 Ratio versus Long Underlying;Sell 2 Calls near month, buy Call at same exercise price in far month, buy underlying;2;2;BUY;1;C;GT;EQ;;BUY;2.0;EUREX
+40;OPTION_VOLATILITY_STRATEGY;BLT12-U;Call Calendar 2x1 Ratio versus Short Underlying;Sell 2 Calls near month, buy Call at same exercise price in far month, sell underlying;2;1;SELL;2;C;;;;SELL;2.0;EUREX
+40;OPTION_VOLATILITY_STRATEGY;BLT12-U;Call Calendar 2x1 Ratio versus Short Underlying;Sell 2 Calls near month, buy Call at same exercise price in far month, sell underlying;2;2;BUY;1;C;GT;EQ;;SELL;2.0;EUREX
+41;OPTION_VOLATILITY_STRATEGY;BUL-C+U;Call Spread versus Call/Long Underlying;Buy Call, sell Call at higher exercise price, sell Call at any exercise price, buy Underlying;3;1;BUY;1;C;;;;BUY;2.0;EUREX
+41;OPTION_VOLATILITY_STRATEGY;BUL-C+U;Call Spread versus Call/Long Underlying;Buy Call, sell Call at higher exercise price, sell Call at any exercise price, buy Underlying;3;2;SELL;1;C;EQ;GT;;BUY;2.0;EUREX
+41;OPTION_VOLATILITY_STRATEGY;BUL-C+U;Call Spread versus Call/Long Underlying;Buy Call, sell Call at higher exercise price, sell Call at any exercise price, buy Underlying;3;3;SELL;1;C;EQ;;;BUY;2.0;EUREX
+42;OPTION_VOLATILITY_STRATEGY;BUL-C-U;Call Spread versus Call/Short Underlying;Buy Call, sell Call at higher exercise price, sell Call at any exercise price, sell Underlying;3;1;BUY;1;C;;;;SELL;2.0;EUREX
+42;OPTION_VOLATILITY_STRATEGY;BUL-C-U;Call Spread versus Call/Short Underlying;Buy Call, sell Call at higher exercise price, sell Call at any exercise price, sell Underlying;3;2;SELL;1;C;EQ;GT;;SELL;2.0;EUREX
+42;OPTION_VOLATILITY_STRATEGY;BUL-C-U;Call Spread versus Call/Short Underlying;Buy Call, sell Call at higher exercise price, sell Call at any exercise price, sell Underlying;3;3;SELL;1;C;EQ;;;SELL;2.0;EUREX
+43;OPTION_VOLATILITY_STRATEGY;BULBR+U;Call Spread versus Put Spread/Long Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, buy underlying;4;1;BUY;1;C;;;;BUY;1.0;EUREX
+43;OPTION_VOLATILITY_STRATEGY;BULBR+U;Call Spread versus Put Spread/Long Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, buy underlying;4;2;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+43;OPTION_VOLATILITY_STRATEGY;BULBR+U;Call Spread versus Put Spread/Long Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, buy underlying;4;3;SELL;1;P;EQ;;;BUY;1.0;EUREX
+43;OPTION_VOLATILITY_STRATEGY;BULBR+U;Call Spread versus Put Spread/Long Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, buy underlying;4;4;BUY;1;P;EQ;LT;;BUY;1.0;EUREX
+44;OPTION_VOLATILITY_STRATEGY;BULBR-U;Call Spread versus Put Spread/Short Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, sell underlying;4;1;BUY;1;C;;;;SELL;1.0;EUREX
+44;OPTION_VOLATILITY_STRATEGY;BULBR-U;Call Spread versus Put Spread/Short Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, sell underlying;4;2;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+44;OPTION_VOLATILITY_STRATEGY;BULBR-U;Call Spread versus Put Spread/Short Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, sell underlying;4;3;SELL;1;P;EQ;;;SELL;1.0;EUREX
+44;OPTION_VOLATILITY_STRATEGY;BULBR-U;Call Spread versus Put Spread/Short Underlying;Buy Call, sell Call at a higher exercise price, sell any Put, buy Put at a lower exercise price than 3rd leg, sell underlying;4;4;BUY;1;P;EQ;LT;;SELL;1.0;EUREX
+45;OPTION_VOLATILITY_STRATEGY;ICOND+U;Iron Condor versus Long Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, buy Underlying;4;1;SELL;1;P;;;;BUY;1.0;EUREX
+45;OPTION_VOLATILITY_STRATEGY;ICOND+U;Iron Condor versus Long Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, buy Underlying;4;2;BUY;1;P;EQ;GT;;BUY;1.0;EUREX
+45;OPTION_VOLATILITY_STRATEGY;ICOND+U;Iron Condor versus Long Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, buy Underlying;4;3;BUY;1;C;EQ;GT;;BUY;1.0;EUREX
+45;OPTION_VOLATILITY_STRATEGY;ICOND+U;Iron Condor versus Long Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, buy Underlying;4;4;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+46;OPTION_VOLATILITY_STRATEGY;ICOND-U;Iron Condor versus Short Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, sell Underlying;4;1;SELL;1;P;;;;SELL;1.0;EUREX
+46;OPTION_VOLATILITY_STRATEGY;ICOND-U;Iron Condor versus Short Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, sell Underlying;4;2;BUY;1;P;EQ;GT;;SELL;1.0;EUREX
+46;OPTION_VOLATILITY_STRATEGY;ICOND-U;Iron Condor versus Short Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, sell Underlying;4;3;BUY;1;C;EQ;GT;;SELL;1.0;EUREX
+46;OPTION_VOLATILITY_STRATEGY;ICOND-U;Iron Condor versus Short Underlying;Sell a Put, buy a Put at higher exercise price, buy a Call at higher exercise price than 2nd leg, sell a Call at a higher exercise price than 3rd leg, sell Underlying;4;4;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+47;OPTION_VOLATILITY_STRATEGY;BRTF+U;Put Calendar Fly versus Long Underlying;Buy Put near month, sell two Puts in far month, buy Put in further month, buy Underlying;3;1;BUY;1;P;;;;BUY;1.0;EUREX
+47;OPTION_VOLATILITY_STRATEGY;BRTF+U;Put Calendar Fly versus Long Underlying;Buy Put near month, sell two Puts in far month, buy Put in further month, buy Underlying;3;2;SELL;2;P;GT;EQ;;BUY;1.0;EUREX
+47;OPTION_VOLATILITY_STRATEGY;BRTF+U;Put Calendar Fly versus Long Underlying;Buy Put near month, sell two Puts in far month, buy Put in further month, buy Underlying;3;3;BUY;1;P;GT;EQ;;BUY;1.0;EUREX
+48;OPTION_VOLATILITY_STRATEGY;BRTF-U;Put Calendar Fly versus Short Underlying;Buy Put near month, sell two Puts in far month, buy Put in further month, sell Underlying;3;1;BUY;1;P;;;;SELL;1.0;EUREX
+48;OPTION_VOLATILITY_STRATEGY;BRTF-U;Put Calendar Fly versus Short Underlying;Buy Put near month, sell two Puts in far month, buy Put in further month, sell Underlying;3;2;SELL;2;P;GT;EQ;;SELL;1.0;EUREX
+48;OPTION_VOLATILITY_STRATEGY;BRTF-U;Put Calendar Fly versus Short Underlying;Buy Put near month, sell two Puts in far month, buy Put in further month, sell Underlying;3;3;BUY;1;P;GT;EQ;;SELL;1.0;EUREX
+49;OPTION_VOLATILITY_STRATEGY;BRT12+U;Put Calendar 2x1 Ratio versus Long Underlying;Sell 2 Puts near month, buy Put at same exercise price in far month, buy underlying;2;1;SELL;2;P;;;;BUY;2.0;EUREX
+49;OPTION_VOLATILITY_STRATEGY;BRT12+U;Put Calendar 2x1 Ratio versus Long Underlying;Sell 2 Puts near month, buy Put at same exercise price in far month, buy underlying;2;2;BUY;1;P;GT;EQ;;BUY;2.0;EUREX
+50;OPTION_VOLATILITY_STRATEGY;BRT12-U;Put Calendar 2x1 Ratio versus Short Underlying;Sell 2 Puts near month, buy Put at same exercise price in far month, sell underlying;2;1;SELL;2;P;;;;SELL;2.0;EUREX
+50;OPTION_VOLATILITY_STRATEGY;BRT12-U;Put Calendar 2x1 Ratio versus Short Underlying;Sell 2 Puts near month, buy Put at same exercise price in far month, sell underlying;2;2;BUY;1;P;GT;EQ;;SELL;2.0;EUREX
+51;OPTION_VOLATILITY_STRATEGY;BER-P+U;Put Spread versus Put/Long Underlying;Buy Put, sell Put at lower exercise price, sell Put at any exercise price, buy Underlying;3;1;BUY;1;P;;;;BUY;2.0;EUREX
+51;OPTION_VOLATILITY_STRATEGY;BER-P+U;Put Spread versus Put/Long Underlying;Buy Put, sell Put at lower exercise price, sell Put at any exercise price, buy Underlying;3;2;SELL;1;P;EQ;LT;;BUY;2.0;EUREX
+51;OPTION_VOLATILITY_STRATEGY;BER-P+U;Put Spread versus Put/Long Underlying;Buy Put, sell Put at lower exercise price, sell Put at any exercise price, buy Underlying;3;3;SELL;1;P;EQ;;;BUY;2.0;EUREX
+52;OPTION_VOLATILITY_STRATEGY;BER-P-U;Put Spread versus Put/Short Underlying;Buy Put, sell Put at lower exercise price, sell Put at any exercise price, sell Underlying;3;1;BUY;1;P;;;;SELL;2.0;EUREX
+52;OPTION_VOLATILITY_STRATEGY;BER-P-U;Put Spread versus Put/Short Underlying;Buy Put, sell Put at lower exercise price, sell Put at any exercise price, sell Underlying;3;2;SELL;1;P;EQ;LT;;SELL;2.0;EUREX
+52;OPTION_VOLATILITY_STRATEGY;BER-P-U;Put Spread versus Put/Short Underlying;Buy Put, sell Put at lower exercise price, sell Put at any exercise price, sell Underlying;3;3;SELL;1;P;EQ;;;SELL;2.0;EUREX
+54;OPTION_VOLATILITY_STRATEGY;RTRIS-U;Ratio Risky versus Short Underlying;Sell Put, buy two Calls at a higher exercise price, sell Underlying;2;1;SELL;1;P;;;;SELL;2.0;EUREX
+54;OPTION_VOLATILITY_STRATEGY;RTRIS-U;Ratio Risky versus Short Underlying;Sell Put, buy two Calls at a higher exercise price, sell Underlying;2;2;BUY;2;C;EQ;GT;;SELL;2.0;EUREX
+56;OPTION_VOLATILITY_STRATEGY;RTSP-U;Risky Time Spread versus Short Underlying;Sell Put near month, buy Call at a higher exercise price in far month, sell Underlying;2;1;SELL;1;P;;;;SELL;2.0;EUREX
+56;OPTION_VOLATILITY_STRATEGY;RTSP-U;Risky Time Spread versus Short Underlying;Sell Put near month, buy Call at a higher exercise price in far month, sell Underlying;2;2;BUY;1;C;NE;GT;;SELL;2.0;EUREX
+57;OPTION_VOLATILITY_STRATEGY;STD-G+U;Straddle versus Strangle/Long Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , buy Underlying;4;1;BUY;1;C;;;;BUY;1.0;EUREX
+57;OPTION_VOLATILITY_STRATEGY;STD-G+U;Straddle versus Strangle/Long Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , buy Underlying;4;2;BUY;1;P;EQ;EQ;;BUY;1.0;EUREX
+57;OPTION_VOLATILITY_STRATEGY;STD-G+U;Straddle versus Strangle/Long Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , buy Underlying;4;3;SELL;1;P;GT;;;BUY;1.0;EUREX
+57;OPTION_VOLATILITY_STRATEGY;STD-G+U;Straddle versus Strangle/Long Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , buy Underlying;4;4;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+58;OPTION_VOLATILITY_STRATEGY;STD-G-U;Straddle versus Strangle/Short Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , sell Underlying;4;1;BUY;1;C;;;;SELL;1.0;EUREX
+58;OPTION_VOLATILITY_STRATEGY;STD-G-U;Straddle versus Strangle/Short Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , sell Underlying;4;2;BUY;1;P;EQ;EQ;;SELL;1.0;EUREX
+58;OPTION_VOLATILITY_STRATEGY;STD-G-U;Straddle versus Strangle/Short Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , sell Underlying;4;3;SELL;1;P;GT;;;SELL;1.0;EUREX
+58;OPTION_VOLATILITY_STRATEGY;STD-G-U;Straddle versus Strangle/Short Underlying;Buy Call and Put at same exercise price in near month, sell any Put and sell Call at  higher exercise price in far month , sell Underlying;4;4;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+59;OPTION_VOLATILITY_STRATEGY;STGS+U;Strangle Spread versus Long Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, buy Underlying;4;1;SELL;1;P;;;;BUY;2.0;EUREX
+59;OPTION_VOLATILITY_STRATEGY;STGS+U;Strangle Spread versus Long Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, buy Underlying;4;2;SELL;1;C;EQ;GT;;BUY;2.0;EUREX
+59;OPTION_VOLATILITY_STRATEGY;STGS+U;Strangle Spread versus Long Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, buy Underlying;4;3;BUY;1;P;GT;;;BUY;2.0;EUREX
+59;OPTION_VOLATILITY_STRATEGY;STGS+U;Strangle Spread versus Long Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, buy Underlying;4;4;BUY;1;C;EQ;GT;;BUY;2.0;EUREX
+60;OPTION_VOLATILITY_STRATEGY;STGS-U;Strangle Spread versus Short Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, sell Underlying;4;1;SELL;1;P;;;;SELL;2.0;EUREX
+60;OPTION_VOLATILITY_STRATEGY;STGS-U;Strangle Spread versus Short Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, sell Underlying;4;2;SELL;1;C;EQ;GT;;SELL;2.0;EUREX
+60;OPTION_VOLATILITY_STRATEGY;STGS-U;Strangle Spread versus Short Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, sell Underlying;4;3;BUY;1;P;GT;;;SELL;2.0;EUREX
+60;OPTION_VOLATILITY_STRATEGY;STGS-U;Strangle Spread versus Short Underlying;Sell Put, sell Call at higher exercise price, buy Put in far month, buy Call in far month at a higher exercise price than 3rd leg, sell Underlying;4;4;BUY;1;C;EQ;GT;;SELL;2.0;EUREX
+61;OPTION_VOLATILITY_STRATEGY;STD-C+U;Straddle versus Call versus long Underlying;Buy Call, buy Put at same exercise price, sell Call at different exercise price, buy Underlying;3;1;BUY;1;C;;;;BUY;2.0;EUREX
+61;OPTION_VOLATILITY_STRATEGY;STD-C+U;Straddle versus Call versus long Underlying;Buy Call, buy Put at same exercise price, sell Call at different exercise price, buy Underlying;3;2;BUY;1;P;EQ;EQ;;BUY;2.0;EUREX
+61;OPTION_VOLATILITY_STRATEGY;STD-C+U;Straddle versus Call versus long Underlying;Buy Call, buy Put at same exercise price, sell Call at different exercise price, buy Underlying;3;3;SELL;1;C;EQ;NE;;BUY;2.0;EUREX
+62;OPTION_VOLATILITY_STRATEGY;STD-C-U;Straddle versus Call versus short Underlying;Buy Call, buy Put at same exercise price, sell Call at different exercise price, sell Underlying;3;1;BUY;1;C;;;;SELL;2.0;EUREX
+62;OPTION_VOLATILITY_STRATEGY;STD-C-U;Straddle versus Call versus short Underlying;Buy Call, buy Put at same exercise price, sell Call at different exercise price, sell Underlying;3;2;BUY;1;P;EQ;EQ;;SELL;2.0;EUREX
+62;OPTION_VOLATILITY_STRATEGY;STD-C-U;Straddle versus Call versus short Underlying;Buy Call, buy Put at same exercise price, sell Call at different exercise price, sell Underlying;3;3;SELL;1;C;EQ;NE;;SELL;2.0;EUREX
+63;OPTION_VOLATILITY_STRATEGY;STD-P+U;Straddle versus Put versus long Underlying;Buy Call, buy Put at same exercise price, sell Put at different exercise price, buy Underlying;3;1;BUY;1;C;;;;BUY;2.0;EUREX
+63;OPTION_VOLATILITY_STRATEGY;STD-P+U;Straddle versus Put versus long Underlying;Buy Call, buy Put at same exercise price, sell Put at different exercise price, buy Underlying;3;2;BUY;1;P;EQ;EQ;;BUY;2.0;EUREX
+63;OPTION_VOLATILITY_STRATEGY;STD-P+U;Straddle versus Put versus long Underlying;Buy Call, buy Put at same exercise price, sell Put at different exercise price, buy Underlying;3;3;SELL;1;P;EQ;NE;;BUY;2.0;EUREX
+64;OPTION_VOLATILITY_STRATEGY;STD-P-U;Straddle versus Put versus short Underlying;Buy Call, buy Put at same exercise price, sell Put at different exercise price, sell Underlying;3;1;BUY;1;C;;;;SELL;2.0;EUREX
+64;OPTION_VOLATILITY_STRATEGY;STD-P-U;Straddle versus Put versus short Underlying;Buy Call, buy Put at same exercise price, sell Put at different exercise price, sell Underlying;3;2;BUY;1;P;EQ;EQ;;SELL;2.0;EUREX
+64;OPTION_VOLATILITY_STRATEGY;STD-P-U;Straddle versus Put versus short Underlying;Buy Call, buy Put at same exercise price, sell Put at different exercise price, sell Underlying;3;3;SELL;1;P;EQ;NE;;SELL;2.0;EUREX
+65;OPTION_VOLATILITY_STRATEGY;CBUS+U;Skinny Call Butterfly versus long Underlying;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price, buy Underlying;3;1;BUY;1;C;;;;BUY;1.0;EUREX
+65;OPTION_VOLATILITY_STRATEGY;CBUS+U;Skinny Call Butterfly versus long Underlying;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price, buy Underlying;3;2;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+65;OPTION_VOLATILITY_STRATEGY;CBUS+U;Skinny Call Butterfly versus long Underlying;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price, buy Underlying;3;3;BUY;1;C;EQ;GT;;BUY;1.0;EUREX
+66;OPTION_VOLATILITY_STRATEGY;CBUS-U;Skinny Call Butterfly versus short Underlying;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price, sell Underlying;3;1;BUY;1;C;;;;SELL;1.0;EUREX
+66;OPTION_VOLATILITY_STRATEGY;CBUS-U;Skinny Call Butterfly versus short Underlying;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price, sell Underlying;3;2;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+66;OPTION_VOLATILITY_STRATEGY;CBUS-U;Skinny Call Butterfly versus short Underlying;Buy Call, sell Call at higher exercise price, buy Call at even higher exercise price, sell Underlying;3;3;BUY;1;C;EQ;GT;;SELL;1.0;EUREX
+67;OPTION_VOLATILITY_STRATEGY;PBUS+U;Skinny Put Butterfly versus long Underlying;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price, buy Underlying;3;1;BUY;1;P;;;;BUY;1.0;EUREX
+67;OPTION_VOLATILITY_STRATEGY;PBUS+U;Skinny Put Butterfly versus long Underlying;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price, buy Underlying;3;2;SELL;1;P;EQ;GT;;BUY;1.0;EUREX
+67;OPTION_VOLATILITY_STRATEGY;PBUS+U;Skinny Put Butterfly versus long Underlying;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price, buy Underlying;3;3;BUY;1;P;EQ;GT;;BUY;1.0;EUREX
+68;OPTION_VOLATILITY_STRATEGY;PBUS-U;Skinny Put Butterfly versus short Underlying;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price, sell Underlying;3;1;BUY;1;P;;;;SELL;1.0;EUREX
+68;OPTION_VOLATILITY_STRATEGY;PBUS-U;Skinny Put Butterfly versus short Underlying;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price, sell Underlying;3;2;SELL;1;P;EQ;GT;;SELL;1.0;EUREX
+68;OPTION_VOLATILITY_STRATEGY;PBUS-U;Skinny Put Butterfly versus short Underlying;Buy Put, sell Put at higher exercise price, buy Put at even higher exercise price, sell Underlying;3;3;BUY;1;P;EQ;GT;;SELL;1.0;EUREX
+69;OPTION_VOLATILITY_STRATEGY;STDT+U;Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, buy Underlying;4;1;SELL;1;C;;;;BUY;1.0;EUREX
+69;OPTION_VOLATILITY_STRATEGY;STDT+U;Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, buy Underlying;4;2;SELL;1;P;EQ;EQ;;BUY;1.0;EUREX
+69;OPTION_VOLATILITY_STRATEGY;STDT+U;Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, buy Underlying;4;3;BUY;1;C;GT;EQ;;BUY;1.0;EUREX
+69;OPTION_VOLATILITY_STRATEGY;STDT+U;Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, buy Underlying;4;4;BUY;1;P;EQ;EQ;;BUY;1.0;EUREX
+70;OPTION_VOLATILITY_STRATEGY;STDT-U;Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, sell Underlying;4;1;SELL;1;C;;;;SELL;1.0;EUREX
+70;OPTION_VOLATILITY_STRATEGY;STDT-U;Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, sell Underlying;4;2;SELL;1;P;EQ;EQ;;SELL;1.0;EUREX
+70;OPTION_VOLATILITY_STRATEGY;STDT-U;Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, sell Underlying;4;3;BUY;1;C;GT;EQ;;SELL;1.0;EUREX
+70;OPTION_VOLATILITY_STRATEGY;STDT-U;Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, Buy  Call and Put in far month, all at same exercise price, sell Underlying;4;4;BUY;1;P;EQ;EQ;;SELL;1.0;EUREX
+71;OPTION_VOLATILITY_STRATEGY;DISTD+U;Diagonal Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, buy Underlying;4;1;SELL;1;C;;;;BUY;2.0;EUREX
+71;OPTION_VOLATILITY_STRATEGY;DISTD+U;Diagonal Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, buy Underlying;4;2;SELL;1;P;EQ;EQ;;BUY;2.0;EUREX
+71;OPTION_VOLATILITY_STRATEGY;DISTD+U;Diagonal Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, buy Underlying;4;3;BUY;1;C;GT;NE;;BUY;2.0;EUREX
+71;OPTION_VOLATILITY_STRATEGY;DISTD+U;Diagonal Straddle Calendar Spread versus long Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, buy Underlying;4;4;BUY;1;P;EQ;EQ;;BUY;2.0;EUREX
+72;OPTION_VOLATILITY_STRATEGY;DISTD-U;Diagonal Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, sell Underlying;4;1;SELL;1;C;;;;SELL;2.0;EUREX
+72;OPTION_VOLATILITY_STRATEGY;DISTD-U;Diagonal Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, sell Underlying;4;2;SELL;1;P;EQ;EQ;;SELL;2.0;EUREX
+72;OPTION_VOLATILITY_STRATEGY;DISTD-U;Diagonal Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, sell Underlying;4;3;BUY;1;C;GT;NE;;SELL;2.0;EUREX
+72;OPTION_VOLATILITY_STRATEGY;DISTD-U;Diagonal Straddle Calendar Spread versus short Underlying;Sell Call and Put in near month, buy Call and Put at different exercise price in far month, sell Underlying;4;4;BUY;1;P;EQ;EQ;;SELL;2.0;EUREX
+73;OPTION_VOLATILITY_STRATEGY;BU13+U;3x1 Ratio Call Spread versus long Underlying;Sell Call, buy 3 Calls at higher exercise price, buy Underlying;2;1;SELL;1;C;;;;BUY;2.0;EUREX
+73;OPTION_VOLATILITY_STRATEGY;BU13+U;3x1 Ratio Call Spread versus long Underlying;Sell Call, buy 3 Calls at higher exercise price, buy Underlying;2;2;BUY;3;C;EQ;GT;;BUY;2.0;EUREX
+74;OPTION_VOLATILITY_STRATEGY;BU13-U;3x1 Ratio Call Spread versus short Underlying;Sell Call, buy 3 Calls at higher exercise price, sell Underlying;2;1;SELL;1;C;;;;SELL;2.0;EUREX
+74;OPTION_VOLATILITY_STRATEGY;BU13-U;3x1 Ratio Call Spread versus short Underlying;Sell Call, buy 3 Calls at higher exercise price, sell Underlying;2;2;BUY;3;C;EQ;GT;;SELL;2.0;EUREX
+75;OPTION_VOLATILITY_STRATEGY;IBUT+U;Iron Butterfly versus long Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, buy Underlying;4;1;SELL;1;P;;;;BUY;1.0;EUREX
+75;OPTION_VOLATILITY_STRATEGY;IBUT+U;Iron Butterfly versus long Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, buy Underlying;4;2;BUY;1;P;EQ;GT;;BUY;1.0;EUREX
+75;OPTION_VOLATILITY_STRATEGY;IBUT+U;Iron Butterfly versus long Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, buy Underlying;4;3;BUY;1;C;EQ;EQ;;BUY;1.0;EUREX
+75;OPTION_VOLATILITY_STRATEGY;IBUT+U;Iron Butterfly versus long Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, buy Underlying;4;4;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+76;OPTION_VOLATILITY_STRATEGY;IBUT-U;Iron Butterfly versus short Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, sell Underlying;4;1;SELL;1;P;;;;SELL;1.0;EUREX
+76;OPTION_VOLATILITY_STRATEGY;IBUT-U;Iron Butterfly versus short Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, sell Underlying;4;2;BUY;1;P;EQ;GT;;SELL;1.0;EUREX
+76;OPTION_VOLATILITY_STRATEGY;IBUT-U;Iron Butterfly versus short Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, sell Underlying;4;3;BUY;1;C;EQ;EQ;;SELL;1.0;EUREX
+76;OPTION_VOLATILITY_STRATEGY;IBUT-U;Iron Butterfly versus short Underlying;Sell Put, buy Put and Call at higher exercise price, sell Call at even higher exercise price, sell Underlying;4;4;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+77;OPTION_VOLATILITY_STRATEGY;BR13+U;3x1 Ratio Put Spread versus long Underlying;Sell Put, buy 3 Puts at lower exercise price, buy Underlying;2;1;SELL;1;P;;;;BUY;2.0;EUREX
+77;OPTION_VOLATILITY_STRATEGY;BR13+U;3x1 Ratio Put Spread versus long Underlying;Sell Put, buy 3 Puts at lower exercise price, buy Underlying;2;2;BUY;3;P;EQ;LT;;BUY;2.0;EUREX
+78;OPTION_VOLATILITY_STRATEGY;BR13-U;3x1 Ratio Put Spread versus short Underlying;Sell Put, buy 3 Puts at lower exercise price, sell Underlying;2;1;SELL;1;P;;;;SELL;2.0;EUREX
+78;OPTION_VOLATILITY_STRATEGY;BR13-U;3x1 Ratio Put Spread versus short Underlying;Sell Put, buy 3 Puts at lower exercise price, sell Underlying;2;2;BUY;3;P;EQ;LT;;SELL;2.0;EUREX
+79;OPTION_VOLATILITY_STRATEGY;STDF+U;Straddle Fly versus Long Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, buy Underlying;6;1;BUY;1;C;;;;BUY;1.0;EUREX
+79;OPTION_VOLATILITY_STRATEGY;STDF+U;Straddle Fly versus Long Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, buy Underlying;6;2;BUY;1;P;EQ;EQ;;BUY;1.0;EUREX
+79;OPTION_VOLATILITY_STRATEGY;STDF+U;Straddle Fly versus Long Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, buy Underlying;6;3;SELL;2;C;GT;;;BUY;1.0;EUREX
+79;OPTION_VOLATILITY_STRATEGY;STDF+U;Straddle Fly versus Long Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, buy Underlying;6;4;SELL;2;P;EQ;EQ;;BUY;1.0;EUREX
+79;OPTION_VOLATILITY_STRATEGY;STDF+U;Straddle Fly versus Long Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, buy Underlying;6;5;BUY;1;C;GT;;;BUY;1.0;EUREX
+79;OPTION_VOLATILITY_STRATEGY;STDF+U;Straddle Fly versus Long Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, buy Underlying;6;6;BUY;1;P;EQ;EQ;;BUY;1.0;EUREX
+80;OPTION_VOLATILITY_STRATEGY;STDF-U;Straddle Fly versus Short Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, sell Underlying;6;1;BUY;1;C;;;;SELL;1.0;EUREX
+80;OPTION_VOLATILITY_STRATEGY;STDF-U;Straddle Fly versus Short Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, sell Underlying;6;2;BUY;1;P;EQ;EQ;;SELL;1.0;EUREX
+80;OPTION_VOLATILITY_STRATEGY;STDF-U;Straddle Fly versus Short Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, sell Underlying;6;3;SELL;2;C;GT;;;SELL;1.0;EUREX
+80;OPTION_VOLATILITY_STRATEGY;STDF-U;Straddle Fly versus Short Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, sell Underlying;6;4;SELL;2;P;EQ;EQ;;SELL;1.0;EUREX
+80;OPTION_VOLATILITY_STRATEGY;STDF-U;Straddle Fly versus Short Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, sell Underlying;6;5;BUY;1;C;GT;;;SELL;1.0;EUREX
+80;OPTION_VOLATILITY_STRATEGY;STDF-U;Straddle Fly versus Short Underlying;Buy Call, buy Put at same exercise price, sell two Calls and two Puts at same exercise price in far month, buy Put and Call at same exercise price in further month, sell Underlying;6;6;BUY;1;P;EQ;EQ;;SELL;1.0;EUREX
+81;OPTION_VOLATILITY_STRATEGY;CB232+U;2x3x2 Ratio Call Butterfly versus long Underlying;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price, buy Underlying;3;1;BUY;2;C;;;;BUY;3.0;EUREX
+81;OPTION_VOLATILITY_STRATEGY;CB232+U;2x3x2 Ratio Call Butterfly versus long Underlying;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price, buy Underlying;3;2;SELL;3;C;EQ;GT;;BUY;3.0;EUREX
+81;OPTION_VOLATILITY_STRATEGY;CB232+U;2x3x2 Ratio Call Butterfly versus long Underlying;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price, buy Underlying;3;3;BUY;2;C;EQ;GT;;BUY;3.0;EUREX
+82;OPTION_VOLATILITY_STRATEGY;CB232-U;2x3x2 Ratio Call Butterfly versus short Underlying;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price, sell Underlying;3;1;BUY;2;C;;;;SELL;3.0;EUREX
+82;OPTION_VOLATILITY_STRATEGY;CB232-U;2x3x2 Ratio Call Butterfly versus short Underlying;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price, sell Underlying;3;2;SELL;3;C;EQ;GT;;SELL;3.0;EUREX
+82;OPTION_VOLATILITY_STRATEGY;CB232-U;2x3x2 Ratio Call Butterfly versus short Underlying;Buy 2 Call, sell 3 Calls at higher exercise price, buy 2 Call at even higher exercise price, sell Underlying;3;3;BUY;2;C;EQ;GT;;SELL;3.0;EUREX
+83;OPTION_VOLATILITY_STRATEGY;PB232+U;2x3x2x Ratio Put Butterfly versus long Underlying;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price, buy Underlying;3;1;BUY;2;P;;;;BUY;3.0;EUREX
+83;OPTION_VOLATILITY_STRATEGY;PB232+U;2x3x2x Ratio Put Butterfly versus long Underlying;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price, buy Underlying;3;2;SELL;3;P;EQ;GT;;BUY;3.0;EUREX
+83;OPTION_VOLATILITY_STRATEGY;PB232+U;2x3x2x Ratio Put Butterfly versus long Underlying;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price, buy Underlying;3;3;BUY;2;P;EQ;GT;;BUY;3.0;EUREX
+84;OPTION_VOLATILITY_STRATEGY;PB232-U;2x3x2x Ratio Put Butterfly versus short Underlying;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price, sell Underlying;3;1;BUY;2;P;;;;SELL;3.0;EUREX
+84;OPTION_VOLATILITY_STRATEGY;PB232-U;2x3x2x Ratio Put Butterfly versus short Underlying;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price, sell Underlying;3;2;SELL;3;P;EQ;GT;;SELL;3.0;EUREX
+84;OPTION_VOLATILITY_STRATEGY;PB232-U;2x3x2x Ratio Put Butterfly versus short Underlying;Buy 2 Put, sell 3 Puts at higher exercise price, buy 2 Put at even higher exercise price, sell Underlying;3;3;BUY;2;P;EQ;GT;;SELL;3.0;EUREX
+85;OPTION_VOLATILITY_STRATEGY;BR23+U;3x2 Ratio Put Spread long Underlying;Sell 2 Puts, buy 3 Puts at lower exercise price, buy underlying;2;1;SELL;2;P;;;;BUY;3.0;EUREX
+85;OPTION_VOLATILITY_STRATEGY;BR23+U;3x2 Ratio Put Spread long Underlying;Sell 2 Puts, buy 3 Puts at lower exercise price, buy underlying;2;2;BUY;3;P;EQ;LT;;BUY;3.0;EUREX
+86;OPTION_VOLATILITY_STRATEGY;BR23-U;3x2 Ratio Put Spread short Underlying;Sell 2 Puts, buy 3 Puts at lower exercise price, sell underlying;2;1;SELL;2;P;;;;SELL;3.0;EUREX
+86;OPTION_VOLATILITY_STRATEGY;BR23-U;3x2 Ratio Put Spread short Underlying;Sell 2 Puts, buy 3 Puts at lower exercise price, sell underlying;2;2;BUY;3;P;EQ;LT;;SELL;3.0;EUREX
+87;OPTION_VOLATILITY_STRATEGY;BU23+U;3x2 Ratio Call Spread long Underlying;Sell 2 Calls, buy 3 Calls at higher exercise price, buy underlying;2;1;SELL;2;C;;;;BUY;3.0;EUREX
+87;OPTION_VOLATILITY_STRATEGY;BU23+U;3x2 Ratio Call Spread long Underlying;Sell 2 Calls, buy 3 Calls at higher exercise price, buy underlying;2;2;BUY;3;C;EQ;GT;;BUY;3.0;EUREX
+88;OPTION_VOLATILITY_STRATEGY;BU23-U;3x2 Ratio Call Spread short Underlying;Sell 2 Calls, buy 3 Calls at higher exercise price, sell underlying;2;1;SELL;2;C;;;;SELL;3.0;EUREX
+88;OPTION_VOLATILITY_STRATEGY;BU23-U;3x2 Ratio Call Spread short Underlying;Sell 2 Calls, buy 3 Calls at higher exercise price, sell underlying;2;2;BUY;3;C;EQ;GT;;SELL;3.0;EUREX
+89;OPTION_VOLATILITY_STRATEGY;BUSWP+U;Call Spread Swap versus Long Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, buy Underlying;4;1;BUY;1;C;;;;BUY;1.0;EUREX
+89;OPTION_VOLATILITY_STRATEGY;BUSWP+U;Call Spread Swap versus Long Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, buy Underlying;4;2;SELL;1;C;EQ;GT;;BUY;1.0;EUREX
+89;OPTION_VOLATILITY_STRATEGY;BUSWP+U;Call Spread Swap versus Long Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, buy Underlying;4;3;SELL;1;C;GT;EQ_ONE;;BUY;1.0;EUREX
+89;OPTION_VOLATILITY_STRATEGY;BUSWP+U;Call Spread Swap versus Long Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, buy Underlying;4;4;BUY;1;C;EQ;AS_TWO;;BUY;1.0;EUREX
+90;OPTION_VOLATILITY_STRATEGY;BUSWP-U;Call Spread Swap versus Short Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, sell Underlying;4;1;BUY;1;C;;;;SELL;1.0;EUREX
+90;OPTION_VOLATILITY_STRATEGY;BUSWP-U;Call Spread Swap versus Short Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, sell Underlying;4;2;SELL;1;C;EQ;GT;;SELL;1.0;EUREX
+90;OPTION_VOLATILITY_STRATEGY;BUSWP-U;Call Spread Swap versus Short Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, sell Underlying;4;3;SELL;1;C;GT;EQ_ONE;;SELL;1.0;EUREX
+90;OPTION_VOLATILITY_STRATEGY;BUSWP-U;Call Spread Swap versus Short Underlying;Buy Call, sell Call at higher exercise price, sell Call in far month at 1st leg exercise price of near month, buy Call in far month at 2nd leg exercise price of near month, sell Underlying;4;4;BUY;1;C;EQ;AS_TWO;;SELL;1.0;EUREX
+91;OPTION_VOLATILITY_STRATEGY;BRSWP+U;Put Spread Swap versus Long Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, buy Underlying;4;1;BUY;1;P;;;;BUY;1.0;EUREX
+91;OPTION_VOLATILITY_STRATEGY;BRSWP+U;Put Spread Swap versus Long Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, buy Underlying;4;2;SELL;1;P;EQ;LT;;BUY;1.0;EUREX
+91;OPTION_VOLATILITY_STRATEGY;BRSWP+U;Put Spread Swap versus Long Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, buy Underlying;4;3;SELL;1;P;GT;EQ_ONE;;BUY;1.0;EUREX
+91;OPTION_VOLATILITY_STRATEGY;BRSWP+U;Put Spread Swap versus Long Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, buy Underlying;4;4;BUY;1;P;EQ;AS_TWO;;BUY;1.0;EUREX
+92;OPTION_VOLATILITY_STRATEGY;BRSWP-U;Put Spread Swap versus Short Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, sell Underlying;4;1;BUY;1;P;;;;SELL;1.0;EUREX
+92;OPTION_VOLATILITY_STRATEGY;BRSWP-U;Put Spread Swap versus Short Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, sell Underlying;4;2;SELL;1;P;EQ;LT;;SELL;1.0;EUREX
+92;OPTION_VOLATILITY_STRATEGY;BRSWP-U;Put Spread Swap versus Short Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, sell Underlying;4;3;SELL;1;P;GT;EQ_ONE;;SELL;1.0;EUREX
+92;OPTION_VOLATILITY_STRATEGY;BRSWP-U;Put Spread Swap versus Short Underlying;Buy Put, sell Put at lower exercise price, sell Put in far month at 1st leg exercise price of near month, buy Put in far month at 2nd leg exercise price of near month, sell Underlying;4;4;BUY;1;P;EQ;AS_TWO;;SELL;1.0;EUREX
+93;OPTION_VOLATILITY_STRATEGY;RSWP+U;Risky Swap versus Long Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, buy Underlying;4;1;SELL;1;P;;;;BUY;1.0;EUREX
+93;OPTION_VOLATILITY_STRATEGY;RSWP+U;Risky Swap versus Long Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, buy Underlying;4;2;BUY;1;C;EQ;GT;;BUY;1.0;EUREX
+93;OPTION_VOLATILITY_STRATEGY;RSWP+U;Risky Swap versus Long Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, buy Underlying;4;3;BUY;1;P;GT;EQ_ONE;;BUY;1.0;EUREX
+93;OPTION_VOLATILITY_STRATEGY;RSWP+U;Risky Swap versus Long Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, buy Underlying;4;4;SELL;1;C;EQ;AS_TWO;;BUY;1.0;EUREX
+94;OPTION_VOLATILITY_STRATEGY;RSWP-U;Risky Swap versus Short Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, sell Underlying;4;1;SELL;1;P;;;;SELL;1.0;EUREX
+94;OPTION_VOLATILITY_STRATEGY;RSWP-U;Risky Swap versus Short Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, sell Underlying;4;2;BUY;1;C;EQ;GT;;SELL;1.0;EUREX
+94;OPTION_VOLATILITY_STRATEGY;RSWP-U;Risky Swap versus Short Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, sell Underlying;4;3;BUY;1;P;GT;EQ_ONE;;SELL;1.0;EUREX
+94;OPTION_VOLATILITY_STRATEGY;RSWP-U;Risky Swap versus Short Underlying;Sell Put, buy Call at higher exercise price, buy Put in far month at near month Put exercise price, sell Call in far month at near month Call exercise price, sell Underlying;4;4;SELL;1;C;EQ;AS_TWO;;SELL;1.0;EUREX
+1;FUTURES_SPREAD;SPD;Future Calendar Spread;Buy one future, sell later expiry;2;1;BUY;1;;;;;;;EUREX
+1;FUTURES_SPREAD;SPD;Future Calendar Spread;Buy one future, sell later expiry;2;2;SELL;1;;GT;;;;;EUREX
+2;FUTURES_SPREAD;BSPD;Basis Calendar Spread;Buy one future, sell later expiry;2;1;BUY;1;;;;;;;EUREX
+2;FUTURES_SPREAD;BSPD;Basis Calendar Spread;Buy one future, sell later expiry;2;2;SELL;1;;GT;;;;;EUREX
+9;INTER_PRODUCT_SPREAD;BNDS;Bond Futures Spread;Spread between different bond futures products;2;1;BUY;;;;;;;;EUREX
+9;INTER_PRODUCT_SPREAD;BNDS;Bond Futures Spread;Spread between different bond futures products;2;2;SELL;;;;;;;;EUREX
+10;INTER_PRODUCT_SPREAD;INXS;Index Futures Spread;Spread between different index futures products;2;1;BUY;;;;;;;;EUREX
+10;INTER_PRODUCT_SPREAD;INXS;Index Futures Spread;Spread between different index futures products;2;2;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;1;BUY;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;2;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;3;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;4;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;5;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;6;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;7;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;8;SELL;;;;;;;;EUREX
+12;INTER_PRODUCT_SPREAD;2YR-TED;2-year TED Spread;Spread between a fixed income Future and multiple legs of a short-term interest rate Future;9;9;SELL;;;;;;;;EUREX
+1;STANDARD_FUTURES_STRATEGY;FBUT;Futures Butterfly;Buy one future, sell two at later expiry, buy one at still later expiry;3;1;BUY;1;;;;ZERO;;;EUREX
+1;STANDARD_FUTURES_STRATEGY;FBUT;Futures Butterfly;Buy one future, sell two at later expiry, buy one at still later expiry;3;2;SELL;2;;GT;;ZERO;;;EUREX
+1;STANDARD_FUTURES_STRATEGY;FBUT;Futures Butterfly;Buy one future, sell two at later expiry, buy one at still later expiry;3;3;BUY;1;;GT;;ZERO;;;EUREX
+2;STANDARD_FUTURES_STRATEGY;FCOND;Futures Condor;Buy future, sell at later expiry, sell at still later expiry, buy at still later expiry;4;1;BUY;1;;;;ZERO;;;EUREX
+2;STANDARD_FUTURES_STRATEGY;FCOND;Futures Condor;Buy future, sell at later expiry, sell at still later expiry, buy at still later expiry;4;2;SELL;1;;GT;;ZERO;;;EUREX
+2;STANDARD_FUTURES_STRATEGY;FCOND;Futures Condor;Buy future, sell at later expiry, sell at still later expiry, buy at still later expiry;4;3;SELL;1;;GT;;ZERO;;;EUREX
+2;STANDARD_FUTURES_STRATEGY;FCOND;Futures Condor;Buy future, sell at later expiry, sell at still later expiry, buy at still later expiry;4;4;BUY;1;;GT;;ZERO;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;1;BUY;1;;;;;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;5;BUY;1;;NEXT_QUARTER;;;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;6;BUY;1;;NEXT_QUARTER;;;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;7;BUY;1;;NEXT_QUARTER;;;;;EUREX
+1;PACK_AND_BUNDLE;BUNDLE2;2-year Bundle;8 legs with consecutive expiries where the first leg is between the first and 4th expiry;8;8;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;1;BUY;1;;;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;5;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;6;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;7;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;8;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;9;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;10;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;11;BUY;1;;NEXT_QUARTER;;;;;EUREX
+2;PACK_AND_BUNDLE;BUNDLE3;3-year Bundle;12 legs with consecutive expiries where the first leg is between the first and 4th expiry;12;12;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;1;BUY;1;;;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;5;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;6;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;7;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;8;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;9;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;10;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;11;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;12;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;13;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;14;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;15;BUY;1;;NEXT_QUARTER;;;;;EUREX
+3;PACK_AND_BUNDLE;BUNDLE4;4-year Bundle;16 legs with consecutive expiries where the first leg is between the first and 4th expiry;16;16;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;1;BUY;1;;;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;5;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;6;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;7;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;8;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;9;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;10;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;11;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;12;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;13;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;14;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;15;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;16;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;17;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;18;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;19;BUY;1;;NEXT_QUARTER;;;;;EUREX
+4;PACK_AND_BUNDLE;BUNDLE5;5-year Bundle;20 legs with consecutive expiries where the first leg is between the first and 4th expiry;20;20;BUY;1;;NEXT_QUARTER;;;;;EUREX
+10;PACK_AND_BUNDLE;WHITE-P;White Pack;4 legs with consecutive expiries where the first leg is between the first and fourth expiry;4;1;BUY;1;;;;;;;EUREX
+10;PACK_AND_BUNDLE;WHITE-P;White Pack;4 legs with consecutive expiries where the first leg is between the first and fourth expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+10;PACK_AND_BUNDLE;WHITE-P;White Pack;4 legs with consecutive expiries where the first leg is between the first and fourth expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+10;PACK_AND_BUNDLE;WHITE-P;White Pack;4 legs with consecutive expiries where the first leg is between the first and fourth expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+11;PACK_AND_BUNDLE;RED-P;Red Pack;4 legs with consecutive expiries where the first leg is between the 5th and 8th expiry;4;1;BUY;1;;;;;;;EUREX
+11;PACK_AND_BUNDLE;RED-P;Red Pack;4 legs with consecutive expiries where the first leg is between the 5th and 8th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+11;PACK_AND_BUNDLE;RED-P;Red Pack;4 legs with consecutive expiries where the first leg is between the 5th and 8th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+11;PACK_AND_BUNDLE;RED-P;Red Pack;4 legs with consecutive expiries where the first leg is between the 5th and 8th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+12;PACK_AND_BUNDLE;GREEN-P;Green Pack;4 legs with consecutive expiries where the first leg is between the 9th and 12th expiry;4;1;BUY;1;;;;;;;EUREX
+12;PACK_AND_BUNDLE;GREEN-P;Green Pack;4 legs with consecutive expiries where the first leg is between the 9th and 12th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+12;PACK_AND_BUNDLE;GREEN-P;Green Pack;4 legs with consecutive expiries where the first leg is between the 9th and 12th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+12;PACK_AND_BUNDLE;GREEN-P;Green Pack;4 legs with consecutive expiries where the first leg is between the 9th and 12th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+13;PACK_AND_BUNDLE;BLUE-P;Blue Pack;4 legs with consecutive expiries where the first leg is between the 13th and 16th expiry;4;1;BUY;1;;;;;;;EUREX
+13;PACK_AND_BUNDLE;BLUE-P;Blue Pack;4 legs with consecutive expiries where the first leg is between the 13th and 16th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+13;PACK_AND_BUNDLE;BLUE-P;Blue Pack;4 legs with consecutive expiries where the first leg is between the 13th and 16th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+13;PACK_AND_BUNDLE;BLUE-P;Blue Pack;4 legs with consecutive expiries where the first leg is between the 13th and 16th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+14;PACK_AND_BUNDLE;GOLD-P;Gold Pack;4 legs with consecutive expiries where the first leg is between the 17th and 20th expiry;4;1;BUY;1;;;;;;;EUREX
+14;PACK_AND_BUNDLE;GOLD-P;Gold Pack;4 legs with consecutive expiries where the first leg is between the 17th and 20th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+14;PACK_AND_BUNDLE;GOLD-P;Gold Pack;4 legs with consecutive expiries where the first leg is between the 17th and 20th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+14;PACK_AND_BUNDLE;GOLD-P;Gold Pack;4 legs with consecutive expiries where the first leg is between the 17th and 20th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+15;PACK_AND_BUNDLE;PURPL-P;Purple Pack;4 legs with consecutive expiries where the first leg is between the 21st and 24th expiry;4;1;BUY;1;;;;;;;EUREX
+15;PACK_AND_BUNDLE;PURPL-P;Purple Pack;4 legs with consecutive expiries where the first leg is between the 21st and 24th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+15;PACK_AND_BUNDLE;PURPL-P;Purple Pack;4 legs with consecutive expiries where the first leg is between the 21st and 24th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+15;PACK_AND_BUNDLE;PURPL-P;Purple Pack;4 legs with consecutive expiries where the first leg is between the 21st and 24th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+16;PACK_AND_BUNDLE;ORANG-P;Orange Pack;4 legs with consecutive expiries where the first leg is between the 25th and 28th expiry;4;1;BUY;1;;;;;;;EUREX
+16;PACK_AND_BUNDLE;ORANG-P;Orange Pack;4 legs with consecutive expiries where the first leg is between the 25th and 28th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+16;PACK_AND_BUNDLE;ORANG-P;Orange Pack;4 legs with consecutive expiries where the first leg is between the 25th and 28th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+16;PACK_AND_BUNDLE;ORANG-P;Orange Pack;4 legs with consecutive expiries where the first leg is between the 25th and 28th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+17;PACK_AND_BUNDLE;PINK-P;Pink Pack;4 legs with consecutive expiries where the first leg is between the 29th and 32nd expiry;4;1;BUY;1;;;;;;;EUREX
+17;PACK_AND_BUNDLE;PINK-P;Pink Pack;4 legs with consecutive expiries where the first leg is between the 29th and 32nd expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+17;PACK_AND_BUNDLE;PINK-P;Pink Pack;4 legs with consecutive expiries where the first leg is between the 29th and 32nd expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+17;PACK_AND_BUNDLE;PINK-P;Pink Pack;4 legs with consecutive expiries where the first leg is between the 29th and 32nd expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+18;PACK_AND_BUNDLE;SILVR-P;Silver Pack;4 legs with consecutive expiries where the first leg is between the 33rd and 36th expiry;4;1;BUY;1;;;;;;;EUREX
+18;PACK_AND_BUNDLE;SILVR-P;Silver Pack;4 legs with consecutive expiries where the first leg is between the 33rd and 36th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+18;PACK_AND_BUNDLE;SILVR-P;Silver Pack;4 legs with consecutive expiries where the first leg is between the 33rd and 36th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+18;PACK_AND_BUNDLE;SILVR-P;Silver Pack;4 legs with consecutive expiries where the first leg is between the 33rd and 36th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+19;PACK_AND_BUNDLE;COPPR-P;Copper Pack;4 legs with consecutive expiries where the first leg is between the 37th and 40th expiry;4;1;BUY;1;;;;;;;EUREX
+19;PACK_AND_BUNDLE;COPPR-P;Copper Pack;4 legs with consecutive expiries where the first leg is between the 37th and 40th expiry;4;2;BUY;1;;NEXT_QUARTER;;;;;EUREX
+19;PACK_AND_BUNDLE;COPPR-P;Copper Pack;4 legs with consecutive expiries where the first leg is between the 37th and 40th expiry;4;3;BUY;1;;NEXT_QUARTER;;;;;EUREX
+19;PACK_AND_BUNDLE;COPPR-P;Copper Pack;4 legs with consecutive expiries where the first leg is between the 37th and 40th expiry;4;4;BUY;1;;NEXT_QUARTER;;;;;EUREX
+1;STANDARD_OPTION_STRATEGY;BER;Put Spread;Buy Put, sell Put at lower exercise price;2;1;BUY;1;P;;;;;;EEX
+1;STANDARD_OPTION_STRATEGY;BER;Put Spread;Buy Put, sell Put at lower exercise price;2;2;SELL;1;P;EQ;LT;;;;EEX
+3;STANDARD_OPTION_STRATEGY;BLT;Call Calendar Spread;Sell Call near month, buy Call at same exercise price in far month;2;1;SELL;1;C;;;;;;EEX
+3;STANDARD_OPTION_STRATEGY;BLT;Call Calendar Spread;Sell Call near month, buy Call at same exercise price in far month;2;2;BUY;1;C;GT;EQ;;;;EEX
+6;STANDARD_OPTION_STRATEGY;BRT;Put Calendar Spread;Sell Put near month, buy Put at same exercise price in far month;2;1;SELL;1;P;;;;;;EEX
+6;STANDARD_OPTION_STRATEGY;BRT;Put Calendar Spread;Sell Put near month, buy Put at same exercise price in far month;2;2;BUY;1;P;GT;EQ;;;;EEX
+8;STANDARD_OPTION_STRATEGY;BUL;Call Spread;Buy Call, sell Call at higher exercise price;2;1;BUY;1;C;;;;;;EEX
+8;STANDARD_OPTION_STRATEGY;BUL;Call Spread;Buy Call, sell Call at higher exercise price;2;2;SELL;1;C;EQ;GT;;;;EEX
+11;STANDARD_OPTION_STRATEGY;CBUT;Call Butterfly;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price;3;1;BUY;1;C;;;;;;EEX
+11;STANDARD_OPTION_STRATEGY;CBUT;Call Butterfly;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price;3;2;SELL;2;C;EQ;GT;;;;EEX
+11;STANDARD_OPTION_STRATEGY;CBUT;Call Butterfly;Buy Call, sell two Calls at higher exercise price, buy Call at equally higher exercise price;3;3;BUY;1;C;EQ;AS_TWO;;;;EEX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;1;BUY;1;C;;;;;;EEX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;2;SELL;1;C;EQ;GT;;;;EEX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;3;SELL;1;C;EQ;AS_TWO;;;;EEX
+12;STANDARD_OPTION_STRATEGY;CCOND;Call Condor;Buy Call, Sell Call at higher exercise price, sell Call at equally higher exercise price, buy Call at again equally higher exercise price;4;4;BUY;1;C;EQ;AS_TWO;;;;EEX
+13;STANDARD_OPTION_STRATEGY;CDIA;Call Diagonal Calendar Spread;Sell Call near month, buy Call at different exercise price in far month;2;1;SELL;1;C;;;;;;EEX
+13;STANDARD_OPTION_STRATEGY;CDIA;Call Diagonal Calendar Spread;Sell Call near month, buy Call at different exercise price in far month;2;2;BUY;1;C;GT;NE;;;;EEX
+22;STANDARD_OPTION_STRATEGY;PBUT;Put Butterfly;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price;3;1;BUY;1;P;;;;;;EEX
+22;STANDARD_OPTION_STRATEGY;PBUT;Put Butterfly;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price;3;2;SELL;2;P;EQ;GT;;;;EEX
+22;STANDARD_OPTION_STRATEGY;PBUT;Put Butterfly;Buy Put, sell two Puts at higher exercise price, buy Put at equally higher exercise price;3;3;BUY;1;P;EQ;AS_TWO;;;;EEX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;1;BUY;1;P;;;;;;EEX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;2;SELL;1;P;EQ;GT;;;;EEX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;3;SELL;1;P;EQ;AS_TWO;;;;EEX
+23;STANDARD_OPTION_STRATEGY;PCOND;Put Condor;Buy Put, Sell Put at higher exercise price, sell Put at equally higher exercise price, buy Put at again equally higher exercise price;4;4;BUY;1;P;EQ;AS_TWO;;;;EEX
+24;STANDARD_OPTION_STRATEGY;PDIA;Put Diagonal Calendar Spread;Sell Put near month, buy Put at different exercise price in far month;2;1;SELL;1;P;;;;;;EEX
+24;STANDARD_OPTION_STRATEGY;PDIA;Put Diagonal Calendar Spread;Sell Put near month, buy Put at different exercise price in far month;2;2;BUY;1;P;GT;NE;;;;EEX
+28;STANDARD_OPTION_STRATEGY;STD;Straddle;Buy Call, buy Put at same exercise price;2;1;BUY;1;C;;;TWO_TICKS;;;EEX
+28;STANDARD_OPTION_STRATEGY;STD;Straddle;Buy Call, buy Put at same exercise price;2;2;BUY;1;P;EQ;EQ;TWO_TICKS;;;EEX
+32;STANDARD_OPTION_STRATEGY;STG;Strangle;Buy Put, buy Call at higher exercise price;2;1;BUY;1;P;;;TWO_TICKS;;;EEX
+32;STANDARD_OPTION_STRATEGY;STG;Strangle;Buy Put, buy Call at higher exercise price;2;2;BUY;1;C;EQ;GT;TWO_TICKS;;;EEX
+1;FUTURES_SPREAD;SPD;Future Calendar Spread;Buy one future, sell later expiry;2;1;BUY;1;;;;;;;EEX
+1;FUTURES_SPREAD;SPD;Future Calendar Spread;Buy one future, sell later expiry;2;2;SELL;1;;GT;;;;;EEX
+2;FUTURES_SPREAD;BSPD;Basis Calendar Spread;Buy one future, sell later expiry;2;1;BUY;1;;;;;;;EEX
+2;FUTURES_SPREAD;BSPD;Basis Calendar Spread;Buy one future, sell later expiry;2;2;SELL;1;;GT;;;;;EEX
+1;INTER_PRODUCT_SPREAD;DIDS;Dirty Dark Spread;Spread of power futures against coal futures;2;1;BUY;;;;;;;;EEX
+1;INTER_PRODUCT_SPREAD;DIDS;Dirty Dark Spread;Spread of power futures against coal futures;2;2;SELL;;;;;;;;EEX
+2;INTER_PRODUCT_SPREAD;CLDS;Clean Dark Spread;Spread of power futures against coal futures and emission futures;3;1;BUY;;;;;;;;EEX
+2;INTER_PRODUCT_SPREAD;CLDS;Clean Dark Spread;Spread of power futures against coal futures and emission futures;3;2;SELL;;;;;;;;EEX
+2;INTER_PRODUCT_SPREAD;CLDS;Clean Dark Spread;Spread of power futures against coal futures and emission futures;3;3;SELL;;;;;;;;EEX
+3;INTER_PRODUCT_SPREAD;DISS;Dirty Spark Spread;Spread of power futures against gas futures;2;1;BUY;;;;;;;;EEX
+3;INTER_PRODUCT_SPREAD;DISS;Dirty Spark Spread;Spread of power futures against gas futures;2;2;SELL;;;;;;;;EEX
+4;INTER_PRODUCT_SPREAD;CLSS;Clean Spark Spread;Spread of power futures against gas futures and emission futures;3;1;BUY;;;;;;;;EEX
+4;INTER_PRODUCT_SPREAD;CLSS;Clean Spark Spread;Spread of power futures against gas futures and emission futures;3;2;SELL;;;;;;;;EEX
+4;INTER_PRODUCT_SPREAD;CLSS;Clean Spark Spread;Spread of power futures against gas futures and emission futures;3;3;SELL;;;;;;;;EEX
+5;INTER_PRODUCT_SPREAD;LOCS;Location Spread;Spread based on the location difference of the underlyings;2;1;BUY;;;;;;;;EEX
+5;INTER_PRODUCT_SPREAD;LOCS;Location Spread;Spread based on the location difference of the underlyings;2;2;SELL;;;;;;;;EEX
+6;INTER_PRODUCT_SPREAD;TIMS;Time Spread;Spread based on the delivery period difference of the underlyings;2;1;BUY;;;;;;;;EEX
+6;INTER_PRODUCT_SPREAD;TIMS;Time Spread;Spread based on the delivery period difference of the underlyings;2;2;SELL;;;;;;;;EEX
+7;INTER_PRODUCT_SPREAD;EMIS;Emission Spread;Spread between different emission allowance products;2;1;BUY;;;;;;;;EEX
+7;INTER_PRODUCT_SPREAD;EMIS;Emission Spread;Spread between different emission allowance products;2;2;SELL;;;;;;;;EEX
+8;INTER_PRODUCT_SPREAD;BASS;Basis Spread;Spread between a future and a related spot market product;2;1;BUY;;;;;;;;EEX
+8;INTER_PRODUCT_SPREAD;BASS;Basis Spread;Spread between a future and a related spot market product;2;2;SELL;;;;;;;;EEX
+11;INTER_PRODUCT_SPREAD;OFFP;Synthetic Offpeak Spread;Spread of power base futures against power peak futures;2;1;BUY;;;;;;;;EEX
+11;INTER_PRODUCT_SPREAD;OFFP;Synthetic Offpeak Spread;Spread of power base futures against power peak futures;2;2;SELL;;;;;;;;EEX
